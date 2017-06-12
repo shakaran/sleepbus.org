@@ -1,0 +1,155 @@
+           <div style="padding-bottom:20px;padding-right:20px;">
+            <div id="input_text">
+            <div class="main_heading" style="padding:30px;font-weight:normal !important;">
+             <?php
+			 echo "Meta / Title Tags >> ".$submodule_details['module_name']." >> ";
+			 echo $section_name;
+             ?>
+            </div>
+			<div id="submenu" style="margin-left:40px;padding-bottom:10px;">
+ 			<?php
+  			if(count($submenus) > 0)
+  			{
+   			 ?>
+    		 <ul>
+     		 <?php
+	  		 foreach($submenus as $submenu)
+	  		 {
+	          ?>
+	          <li><a title="<?php echo $submenu['name'];?>" href="<?php echo base_url().admin."/metatags/".$submenu['url'];?>" <?php if($submenu['url'] == $section){ echo "class='active'";}?>><span><?php echo $submenu['name'];?></span></a></li>
+	          <?php 
+	         }
+	         ?>
+            </ul>
+           <?php	   
+          }
+          ?>
+          </div>
+          <div style="text-align:left;padding:20px 0px 5px 45px;">
+               <?php
+				 ksort($category_navigation);
+				 if(count($category_navigation) > 0)
+				 {
+				  echo "<span class='navigation'>Parent Categories: <a class='navigation_link' href=".base_url().admin."/".$active_module."/".$section.">Main Categories</a> >> </span>";	 
+				  $count=0;
+				  foreach($category_navigation as $navigation)
+				  {
+				   $count++;
+                   if($count != count($category_navigation))
+				   {
+				    ?>
+                    <span class='navigation'>
+					<a class="navigation_link" href="<?php echo base_url().admin;?>/<?php echo $active_module."/".$section;?>/<?php echo $navigation['id'];?>/<?php echo $navigation['depth']+1;?>" title="<?php echo ucfirst($navigation['category_name']);?>"><?php echo ucfirst($navigation['category_name']);?></a></span>				 &nbsp;>>&nbsp;
+					<?php
+				   }
+				   else
+				   {
+				    echo ucfirst($navigation['category_name']);
+
+
+					
+				    echo "<div>Select Parent Category : ";
+					echo form_dropdown('parent_id',$parent_category_drop_down_attribute, $parent_id,"class='select_action' style='width:150px;' id='parent_id'  onchange=\"window.location='".base_url().admin."/".$active_module."/".$section."/'+this.value+'/$depth'\"");
+					echo "</div>";
+				   }
+
+                 
+				  }
+				 }
+               ?>
+                </span>
+
+              </div>                      
+            <?php					 
+			if(count($category_list) > 0)
+			{
+					   
+		     ?>  
+             <div class="clearfix">&nbsp;</div>   
+             <div class="clearfix"></div>   
+             <div class="ulTable">
+            
+             <ul>
+            	<li>
+                	<div class="ulTableinner sn-no">&nbsp;&nbsp;S.No</div>
+                	<div class="ulTableinner sn-no-other" style="width:150px;">Page Name</div>
+                	<div class="ulTableinner sn-no-other" style="width:290px;">Page Title</div>
+                	<div class="ulTableinner sn-no-other" style="width:224px;">Tools</div>
+                    
+                </li>
+                
+                
+            
+            </ul>
+            
+             
+           </div>
+            <div class="clearfix"></div>
+           
+           
+			
+              <!-- ------ end ------------>
+              <div class="ulTable_record" id="recordList">
+              
+              <ul>
+			  <?php
+			  $i=1;
+			  foreach($category_list as $page)
+			  {
+			   ?>
+			    <li id="recordsArray_<?php echo $page['id'];?>" <?php if($page['id'] == '0'){ $i=""; ?> style="background-color:white;"<?php }?>>
+                 <div class="ulTableinner_record sn-no">&nbsp;&nbsp;<?php echo $i;?></div>
+                 <div class="ulTableinner_record sn-no-other-record" style="width:150px;">
+				 <?php echo $page['page_name']; if($page['id'] == '0'){ ?> <span style="color:#FF8000"><b>(Main Page)</b></span> <?php }?></div>
+                 <div class="ulTableinner_record sn-no-other-record" style="width:286px;padding:2px;"><?php echo $page['meta']['page_title'];?></div>
+                 
+                 
+                 <div class="ulTableinner_record sn-no-other-record" style="width:220px;">
+                 
+                 
+                 
+                  <?php
+				  if((($category_level > ($page['depth']+1)) or ($category_level == 0)))
+					{
+   			         if($is_subcategory[$page['id']] == "yes")
+					 {		
+					  ?>
+					  <a href="<?php echo base_url().admin;?>/<?php echo $active_module;?>/<?php echo $section;?>/<?php echo $page['id'];?>/<?php echo $page['depth']+1;?>" title="View Subcategories">View Subcategories&nbsp; | &nbsp;</a>   
+                      <?php
+					 }
+					 else
+					 {
+					  ?>
+					  <span class="remarks">&nbsp;&nbsp;&nbsp;No Subcategories </span>&nbsp; | &nbsp;   
+                      <?php
+					 }
+					}
+                 
+                   ?>
+                 
+                 
+                 
+                 
+                 
+                  <a href="javascript:void(0)" onclick="OpenMetatagsForm('<?php echo base_url()?>','<?php echo $page['id']?>','<?php echo $page_type;?>','<?php echo $section_name;?>','<?php echo $section;?>')" title="Edit" style="color: #884400;  text-decoration: none;"><span class="tools_icon"><?php echo img(base_url()."images/".admin."/icons/tools/edit.png");?></span>&nbsp;Edit</a>
+                 </div>
+                 <div class="clearfix"></div>
+                </li>
+			   <?php
+			   $i++;
+			  }
+			  ?>
+               </ul>
+			  </div>
+              
+			                 
+              <div class="clear"></div>
+			   <?php
+			 
+			  
+   		     }
+			?>  
+                     
+                     
+            </div>
+           </div>

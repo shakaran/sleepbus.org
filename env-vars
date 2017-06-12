@@ -1,0 +1,8 @@
+# defaults for local dev vm
+SLEEPBUS_DB_USER=root
+SLEEPBUS_DB_PASSWORD=banana
+SLEEPBUS_DB_HOST=sleepbussql
+SLEEPBUS_DB_NAME=sleepbus_local
+SLEEPBUS_PP_API_USER=none
+SLEEPBUS_PP_API_PASSWORD=none
+SLEEPBUS_PP_API_SIGNATURE=none

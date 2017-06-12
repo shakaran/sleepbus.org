@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* DYNAMIC SUBMIT STARTS HERE */
+input[type=button]{background:url(../images/buttons/button.jpg) repeat-x left top; padding-left:5px; padding-right:5px; height:22px; outline:none; border:1px #b2cde0 solid; margin:0; font-family:Arial; font-size:11px; 
+ padding-bottom:3px; font-weight:bold; text-decoration:none; color:#fff; cursor:pointer;}
+input[type=button]:hover{background:url(../images/buttons/button.jpg) repeat-x left -22px; color:#fff; outline:none;  border:1px #b2cde0 solid;  font-weight:normal; cursor:pointer; font-weight:bold;}
+input[type=button]:active{ background-position:bottom; color:#fff; outline:none;  border:1px #b2cde0 solid;  font-weight:normal; cursor:pointer; font-weight:bold;}
+/* DYNAMIC SUBMIT STARTS HERE */
+
+input[type=submit]{background:url(../images/buttons/button.jpg) repeat-x left top; padding-left:5px; padding-right:5px; height:22px; outline:none; border:1px #b2cde0 solid; margin:0; font-family:Arial; font-size:11px; 
+ padding-bottom:3px; font-weight:bold; text-decoration:none; color:#fff; cursor:pointer;}
+input[type=submit]:hover{background:url(../images/buttons/button.jpg) repeat-x left -22px; color:#fff; outline:none;  border:1px #b2cde0 solid;  font-weight:normal; cursor:pointer; font-weight:bold;}
+input[type=submit]:active{ background-position:bottom; color:#fff; outline:none;  border:1px #b2cde0 solid;  font-weight:normal; cursor:pointer; font-weight:bold;}

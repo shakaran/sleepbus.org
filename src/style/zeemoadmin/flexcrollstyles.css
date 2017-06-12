@@ -1,0 +1,140 @@
+﻿#test1, #test2, #test3 {
+background-color: #E7EADE;
+width: 260px;
+height: 83px;
+overflow: auto;
+margin: 0em;
+padding: 0.5em;
+border: px solid #410000;
+position: absolute;
+outline: none;
+}
+
+#test1 {
+background-color: #6F1C1C;
+left: 0.8em;
+top: 1em;
+}
+
+#test1 div {
+color: #FDD;
+}
+
+#test2 {
+width: 265px;
+right: 0.5em;
+top: 1em;
+background-color: #ffffff;
+border:1px solid #c1bfbf;
+}
+
+#test3 {
+width: 90%;
+height: 65px;
+border-width: 0px;
+top: 410px;
+left: 1.5em;
+}
+
+.aligntocenter {
+margin: 0em auto;
+border: 2px solid #A22;
+width: 90%;
+position: relative;
+}
+
+.fixedsize {
+width: 400px;
+height: auto;
+position: relative;
+color: black;
+padding: 1px;
+}
+
+.version {
+background: #999;
+color: white;
+font-size: 75%;
+
+}
+
+/* general page style ends here */
+
+/* Scroll Bar Master Styling Starts Here */
+
+.scrollgeneric
+{
+line-height: 1px;
+font-size: 1px;
+position: absolute;
+}
+
+.vscrollerbase, .vscrollerbar {
+width: 15px;
+top: 0px;
+}
+
+.vscrollerbar {
+left: 0px;
+}
+
+.hscrollerbase, .hscrollerbar {
+height: 15px;
+left: 0px;
+
+}
+
+
+.hscrollerbar {
+top: 0px;
+}
+
+.vscrollerbar, .hscrollerbar {
+/*padding information of these elements are only used for
+padding of the scroll-bar with respect to the scroll base,
+the padding will automatically be turned off by the script*/
+/* z-index for scrollbars no longer has to be given as of version
+1.7.5 for correct operation, but it is still recommended, as this
+decides the z-index for content.*/
+z-index: 2;
+}
+
+
+
+.vscrollerbase, .hscrollerbase {}
+
+
+
+
+#test2 .vscrollerbase {width:8px; border-left:1px solid #C6C6C6;}
+
+#test2 .vscrollerbar {background-color: #c0bdbd; padding:0px; height:50px!important;}
+
+#test2 .vscrollerbasebeg, #test2 .vscrollerbaseend {
+background-image: none;
+}
+
+
+#test3 .hscrollerbase {
+height: 9px;
+background: white none;
+}
+
+
+#test3 .hscrollerbaseend{
+border-width: 0;
+background-color: #63615A;
+height: 5px;
+width: 12px;
+}
+
+#test3 .hscrollerbasebeg{
+border-width: 0px 0px 0px 5px;
+}
+
+#test3 .hscrollerbar {
+background-color: #8F9793;
+padding: 3px;
+}
+
+

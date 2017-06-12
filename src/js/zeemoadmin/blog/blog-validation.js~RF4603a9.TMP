@@ -1,0 +1,78 @@
+function ValidateCategoryForm()
+{
+ document.getElementById("error").innerHTML="";
+ document.getElementById("error1").innerHTML="";  
+
+ var error=false;
+
+ if(trim(document.getElementById("category_name").value)=="") 
+ {
+  document.getElementById("error1").innerHTML="Please enter category name";
+  error=true;
+ }
+
+ 
+ if(error == true) return false;
+}
+function ValidateBloggerForm()
+{
+ document.getElementById("error").innerHTML="";
+ document.getElementById("error1").innerHTML="";  
+
+ var error=false;
+
+ if(trim(document.getElementById("blogger_name").value)=="") 
+ {
+  document.getElementById("error1").innerHTML="Please enter blogger name";
+  error=true;
+ }
+
+ 
+ if(error == true) return false;
+}
+
+
+function ValidateBlogForm()
+{
+ document.getElementById("error").innerHTML="";
+ document.getElementById("error1").innerHTML="";  
+ document.getElementById("error2").innerHTML="";  
+ document.getElementById("error3").innerHTML="";  
+ document.getElementById("error4").innerHTML="";   
+ document.getElementById("error5").innerHTML="";   
+
+ var error=false;
+ var focus_id="";
+
+ if(trim(document.getElementById("cat_id").value)=="") 
+ {
+  document.getElementById("error4").innerHTML = "Please select a category";
+  error=true;
+ }
+ if(trim(document.getElementById("blogger_id").value)=="") 
+ {
+  document.getElementById("error5").innerHTML = "Please select a blogger";
+  error=true;
+ }
+
+ if(trim(document.getElementById("blog_name").value)=="") 
+ {
+  document.getElementById("error1").innerHTML = "Please enter blog name";
+  error=true;
+ }
+
+ if(trim(document.getElementById("intro_text").value)=="") 
+ {
+  document.getElementById("error2").innerHTML="Please enter short description of blog";
+  error=true;
+ }
+ 
+ if(FCKeditorAPI.GetInstance('description').GetHTML(true)=="") 
+ {
+  document.getElementById('error3').innerHTML="Please enter description of blog";
+  error=true;
+ }
+
+ if(error==true) return false;
+}
+

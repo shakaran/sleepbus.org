@@ -1,0 +1,125 @@
+function ValidateIconSetting()
+{
+ document.getElementById("error").innerHTML="";
+ document.getElementById("error1").innerHTML="";  
+ document.getElementById("error2").innerHTML="";  
+ //document.getElementById("error3").innerHTML="";  
+ document.getElementById("error4").innerHTML="";  
+
+ var error=false;
+ var focus_id="";
+ if(trim(document.getElementById("section_icon_name").value)=="") 
+ {
+  document.getElementById("error1").innerHTML="Please enter icon name";
+  if(focus_id=="") focus_id="section_icon_name";
+  error=true;
+ }
+ if(trim(document.getElementById("url").value)=="") 
+ {
+  document.getElementById("error4").innerHTML="Please enter URL";
+  if(focus_id=="") focus_id="url";
+  error=true;
+ }
+ else if(!ValidateUrl(document.getElementById("url").value))
+ {
+  document.getElementById("error4").innerHTML="Please enter valid url";
+  if(focus_id=="") focus_id="url";
+  error=true;
+ }
+
+ if(document.getElementById('submit_form').value == "Submit")
+ {
+  if(document.getElementById('main_image').value == "")
+  {
+   document.getElementById('error2').innerHTML="Please browse to upload  image";
+    if(focus_id=="") focus_id="main_image";
+
+   error=true;
+  }
+ }
+/* if(trim(document.getElementById("intro_text").value)=="") 
+ {
+  document.getElementById("error3").innerHTML="Please enter text";
+  if(focus_id=="") focus_id="intro_text";
+  error=true;
+ }
+
+*/
+ if(error == true)
+ {
+  document.getElementById(focus_id).focus();
+  return false;
+ }
+ else
+ {
+  return true;
+ }
+ 
+}
+
+function ValidateMetatagsForm()
+{
+ document.getElementById("error1").innerHTML="";  
+ var error=false;
+ var focus_id="";
+ if(document.getElementById('heading').value == "")
+ {
+  document.getElementById("error1").innerHTML="Please enter heading";
+  if(focus_id=="") focus_id="heading";
+  error=true;	 
+ }
+ if(error == true)
+ {
+  return false;
+ }
+}
+
+function OpenCtaForm(file_path,page_id,page_type,main_section,section)
+{
+ $.prettyPhoto.open(file_path+"admin/cta/AddCta/"+page_type+"/"+page_id+"/"+main_section+"/"+section+"&iframe=true&width=620&height=310");
+}
+function OpenProductMetaForm(path)
+{
+ window.location=path;
+}
+
+ function ShowProductAlert(check_id,total_products)
+{
+ var total_checked = Number(document.getElementById("total_checked").value);
+ if(total_checked >= 3)
+ {
+	 
+  if(document.getElementById(check_id).checked == true)
+  {
+	
+   alert("You can not check more than 3 items for displaying  CTA");
+   document.getElementById(check_id).checked=false;  
+  }
+  else
+  {
+   document.getElementById("total_checked").value=total_checked-1;
+  }
+ }
+ else
+ {
+   if(document.getElementById(check_id).checked == true)
+   {
+    if(total_products == 0)	  
+    {
+     alert("You can not check this location because it has no properties");
+     document.getElementById(check_id).checked=false;   
+    }
+    else
+    {
+     document.getElementById("total_checked").value=total_checked+1;
+     document.getElementById(check_id).checked=true;   
+    }
+   }
+   if(document.getElementById(check_id).checked == false)
+   {
+    document.getElementById("total_checked").value=total_checked-1;
+    document.getElementById(check_id).checked=false;   
+   }
+  }
+ }
+

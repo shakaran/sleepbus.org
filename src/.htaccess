@@ -1,0 +1,34 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /
+
+### re-direct index.html to root / ###
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.html\ HTTP/
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+### re-direct index.html to root / ###
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.php\ HTTP/
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)index\.php$ /$1 [R=301,L]
+
+## Removes trailing slashes
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+#RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+##RewriteRule ^(.+)/$ http://www.test.sleepbus.org/$1 [L,R=301]
+#RewriteRule ^(.+)/$ index.php?/$1 [L,R=301]
+#
+#### shows links with www / ###
+#RewriteCond %{HTTP_HOST} !^(www|subdomain) [NC]
+#RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+#RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+##RewriteRule ^(.*)$ http://www.test.sleepbus.org/$1 [L,R=301]
+#RewriteRule ^(.*)$ index.php?/$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ index.php?/$1 [L]
