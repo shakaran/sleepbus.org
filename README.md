@@ -1,24 +1,24 @@
-*README being updated for new repo, bear with*
-
 # sleepbus.org
 
-Dev tasks and issues for [sleepbus.org](https://www.sleepbus.org) webite
+Source code, development tasks and issue tracker for [sleepbus.org](https://www.sleepbus.org) non-profit organisation, helping to provide safe sleeps for those living rough.
 
 # Getting up and running with the project
 
 Want to check out the code and get the local dev environment running on your machine?
 
-Start by [sending Leon an email](mailto:leon.stafford@mac.com) with your GitLab and GitHub usernames (creating them if need be).
+No problem, everything's here that you need. As the source code is public domain, you can clone or [download the latest snapshot of our master branch](https://github.com/sleepbusorg/sleepbus.org/archive/master.zipl) and follow the instructions below to get it running. 
 
-You'll be notified once you have access. You can now assign yourself dev tasks/bugs you'd like to work on from this GitHub repo's [Issues page](https://github.com/leonstafford/sleepbus_org/issues).
+If you're wanting to join the volunteer team of developers and testers, please send en email to [leonstafford@protonmail.com](mailto:leonstafford@protonmail.com) with your GitHub username, or chat with him on [Gitter](https://gitter.im/leonstafford) and he'll add you to the team in GitHub.
+
+Continue reading below and if you need help, [create an issue](https://github.com/sleepbusorg/sleepbus.org/issues), one of the devs will respond to you.
 
 ## Local dev environment
 
 Being able to run the sleepbus.org web application on your local computer is fairly simple. We currently use a couple of Docker containers - one for MySQL (mariadb) and one for Apache/PHP.
 
-Once you've cloned the repo from GitLab:
+Once you've cloned this repo from GitHub:
 
-`git clone git@gitlab.com:ljs/sleepbus.git`
+`git clone git@github.com:sleepbusorg/sleepbus.org.git`
 
 You can run the provisioning script:
 
@@ -49,14 +49,14 @@ To get into the running container to view logs or modify the environment:
 
 ## Development flow
 
-There is a [project board](https://github.com/leonstafford/sleepbus_org/projects/1) on GitHub, populated from the dev tasks on [GitHub Issues](https://github.com/leonstafford/sleepbus_org/issues). Assign yourself to the task you want to work on (which has not other assignee yet) and move the card over the Doing column.
+[GitHub Issues](https://github.com/leonstafford/sleepbusorg/sleepbus.org/issues) contain our development tasks and bugs to work on. Assign yourself to the task you want to work on (which has no other assignee yet).
 
 ### Git branching
 
  - create new feature branch, based off master when you start development
  - keep it up to date by rebasing (`git fetch && pull --rebase master` or such)
- - ping @leonstafford on the GitHub Issue and move your card into the Code review column, either when you think it's complete, or want an early review.
- - when dev has passed code review, it will be merged into master or other deployment branch (things still a bit manual until codebase moved to GitHub)
+ - either when you want early feedback or when you think the task is complete, create a pull request in GitHub
+ - when dev has passed code review, it will be merged into master or other deployment branch
 
 ## Minimal process
 
