@@ -1,0 +1,13 @@
+before_install:
+  - apt-get update -qq && DEBIAN_FRONTEND=noninteractive apt-get install -y -qq rsync
+
+deploy:
+  - echo "${SSH_PRIVATE_KEY}" > id_rsa
+  - chmod 700 id_rsa
+  - mkdir "${HOME}/.ssh"
+  - echo "${SSH_HOST_KEY}" > "${HOME}/.ssh/known_hosts"
+  # h human readable, r recursive, v verbose, z compress
+  - rsync -hrvz --exclude=_ -e 'ssh -i id_rsa' src/ "${RSYNC_REMOTE_PATH}"
+branches:
+  only:
+    - master
