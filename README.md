@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/sleepbusorg/sleepbus.org/tree/master.svg?style=svg)](https://circleci.com/gh/sleepbusorg/sleepbus.org/tree/master)
+
 # sleepbus.org
 
 Source code, development tasks and issue tracker for [sleepbus.org](https://www.sleepbus.org) non-profit organisation, helping to provide safe sleeps for those living rough.
@@ -65,6 +67,12 @@ This doc provides a starting point for our collaboration and will never be set i
 ## Communicating
 
 Where possible, discussing directly on the Issue or Pull Request is great. For things that don't fit into those, there is [sleepbus Gitter chatroom](https://gitter.im/sleepbusorg/) for public discussion. Email for anything private.
+
+## Reporting issues
+
+Access the build information for the environment at `/version.txt`. Use this when reporting the issue you have encountered.
+
+*TODO: add Issue template in GitHub*
 
 ## Style guide/linting
 
