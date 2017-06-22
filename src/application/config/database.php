@@ -4,10 +4,10 @@ $active_group = 'default';
 // $active_record = TRUE;
 $query_builder = TRUE;
 
-$db['default']['hostname'] = $GLOBALS['env_config']['database']['DB_HOST'];
-$db['default']['username'] = $GLOBALS['env_config']['database']['DB_USER'];
-$db['default']['password'] = $GLOBALS['env_config']['database']['DB_PASSWORD'];
-$db['default']['database'] = $GLOBALS['env_config']['database']['DB_NAME'];
+$db['default']['hostname'] = getenv('DB_HOST');
+$db['default']['username'] = getenv('DB_USER');
+$db['default']['password'] = getenv('DB_PASSWORD');
+$db['default']['database'] = getenv('DB_NAME');
 $db['default']['dbdriver'] = 'mysqli';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = FALSE;

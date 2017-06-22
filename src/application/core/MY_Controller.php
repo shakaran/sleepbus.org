@@ -126,8 +126,8 @@ class MY_Controller extends CI_Controller {
 		 // Payment Settings
 		 $this->data['price_type']="AUD";	 
 
-	     $this->data['merchantEmail'] = $GLOBALS['env_config']['paypal']['PP_MERCHANT_EMAIL'];
-         $this->data['paypal_url'] = $GLOBALS['env_config']['paypal']['PP_FORM_URL'];
+	     $this->data['merchantEmail'] = getenv('PP_MERCHANT_EMAIL');
+         $this->data['paypal_url'] = getenv('PP_FORM_URL');
 
 	    }
 	}
@@ -583,9 +583,9 @@ class MY_Controller extends CI_Controller {
     
     $subject= $email_message['subject'];   
 
-    $emailConfig['protocol'] = $GLOBALS['env_config']['email']['PROTOCOL'];
-    $emailConfig['smtp_host'] = $GLOBALS['env_config']['email']['SMTP_HOST'];
-    $emailConfig['smtp_port'] = $GLOBALS['env_config']['email']['SMTP_PORT'];
+    $emailConfig['protocol'] = getenv('PROTOCOL');
+    $emailConfig['smtp_host'] = getenv('SMTP_HOST');
+    $emailConfig['smtp_port'] = getenv('SMTP_PORT');
 
     $this->load->library('email');
 
@@ -632,9 +632,9 @@ class MY_Controller extends CI_Controller {
 
    $subject= $email_message['subject'];   
 
-    $emailConfig['protocol'] = $GLOBALS['env_config']['email']['PROTOCOL'];
-    $emailConfig['smtp_host'] = $GLOBALS['env_config']['email']['SMTP_HOST'];
-    $emailConfig['smtp_port'] = $GLOBALS['env_config']['email']['SMTP_PORT'];
+    $emailConfig['protocol'] = getenv('PROTOCOL');
+    $emailConfig['smtp_host'] = getenv('SMTP_HOST');
+    $emailConfig['smtp_port'] = getenv('SMTP_PORT');
 
     $this->load->library('email');
 

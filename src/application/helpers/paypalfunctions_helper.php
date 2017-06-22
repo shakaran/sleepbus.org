@@ -10,8 +10,8 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 	global $API_Endpoint;
 	global $PAYPAL_URL;
 
-    $API_Endpoint = $GLOBALS['env_config']['paypal']['PP_API_ENDPOINT'];
-    $PAYPAL_URL = $GLOBALS['env_config']['paypal']['PP_CHECKOUT_URL'];
+    $API_Endpoint = getenv('PP_API_ENDPOINT');
+    $PAYPAL_URL = getenv('PP_CHECKOUT_URL');
 
 	if (session_id() == "") 
 		session_start();
@@ -385,9 +385,9 @@ if(!defined('BASEPATH')) exit('No direct script access allowed');
 	//' Replace <API_PASSWORD> with your API Password
 	//' Replace <API_SIGNATURE> with your Signature
 	//'------------------------------------
-	$API_UserName = $GLOBALS['env_config']['paypal']['PP_API_USER'];
-	$API_Password = $GLOBALS['env_config']['paypal']['PP_API_PASSWORD'];
-	$API_Signature = $GLOBALS['env_config']['paypal']['PP_API_SIGNATURE'];
+	$API_UserName = getenv('PP_API_USER');
+	$API_Password = getenv('PP_API_PASSWORD');
+	$API_Signature = getenv('PP_API_SIGNATURE');
 
 	// BN Code 	is only applicable for partners
 	$sBNCode = "PP-ECWizard";

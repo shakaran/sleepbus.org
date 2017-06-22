@@ -12,6 +12,6 @@ RUN apt-get update \
 COPY *.sh /
 COPY seed_data /seed_data
 
-COPY environment_config-sample.ini /var/www/environment_config.ini
-RUN chown www-data:www-data /var/www/environment_config.ini
+COPY .env-SAMPLE /var/www/.env
+RUN chown www-data:www-data /var/www/.env
 

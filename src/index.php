@@ -53,9 +53,8 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-$GLOBALS['env_config'] = parse_ini_file("../environment_config.ini", true);
 
-define('ENVIRONMENT', $GLOBALS['env_config']['environment']['ENVIRONMENT']);
+define('ENVIRONMENT', getenv('ENVIRONMENT'));
 
 /*
  *---------------------------------------------------------------
