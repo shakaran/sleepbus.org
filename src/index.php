@@ -54,6 +54,12 @@
  * NOTE: If you change these, also change the error_reporting() code below
  */
 
+// load Composer packages
+include_once './application/vendor/autoload.php';
+
+$dotenv = new Dotenv\Dotenv('..');
+$dotenv->load();
+
 define('ENVIRONMENT', getenv('ENVIRONMENT'));
 
 /*
