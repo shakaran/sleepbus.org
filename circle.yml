@@ -12,3 +12,13 @@ deployment:
       - echo "Build:" >> src/version.txt
       - echo $CIRCLE_BUILD_URL >> src/version.txt
       - rsync -hrvz --exclude=_ -e 'ssh -i id_rsa' src/ "${RSYNC_REMOTE_PATH}"
+  uat:
+    branch: uat
+    commands:
+      - echo "Commit:" > src/version.txt
+      - echo $CIRCLE_SHA1 > src/version.txt
+      - echo "Branch:" >> src/version.txt
+      - echo $CIRCLE_BRANCH >> src/version.txt
+      - echo "Build:" >> src/version.txt
+      - echo $CIRCLE_BUILD_URL >> src/version.txt
+      - rsync -hrvz --exclude=_ -e 'ssh -i id_rsa' src/ "${RSYNC_REMOTE_PATH_UAT}"
