@@ -2,7 +2,7 @@ dependencies:
   pre:
     - sudo apt-get update -qq; DEBIAN_FRONTEND=noninteractive sudo apt-get install -y -qq rsync
     - curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
-    - composer -d src/application
+    - composer install -d src/application/
 deployment:
   production:
     branch: dev
