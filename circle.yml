@@ -3,7 +3,7 @@ dependencies:
     - sudo apt-get update -qq; DEBIAN_FRONTEND=noninteractive sudo apt-get install -y -qq rsync
 deployment:
   production:
-    branch: master
+    branch: dev
     commands:
       - echo "Commit:" > src/version.txt
       - echo $CIRCLE_SHA1 > src/version.txt
@@ -11,7 +11,7 @@ deployment:
       - echo $CIRCLE_BRANCH >> src/version.txt
       - echo "Build:" >> src/version.txt
       - echo $CIRCLE_BUILD_URL >> src/version.txt
-      - rsync -hrvz --exclude=_ -e 'ssh -i id_rsa' src/ "${RSYNC_REMOTE_PATH}"
+      - rsync -hrvz --exclude=_ -e 'ssh -i id_rsa' src/ "${RSYNC_REMOTE_PATH_DEV}"
   uat:
     branch: uat
     commands:
