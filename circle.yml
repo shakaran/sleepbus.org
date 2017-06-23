@@ -21,4 +21,4 @@ deployment:
       - echo $CIRCLE_BRANCH >> src/version.txt
       - echo "Build:" >> src/version.txt
       - echo $CIRCLE_BUILD_URL >> src/version.txt
-      - rsync -hrvz --exclude=_ -e 'ssh -i id_rsa' src/ "${RSYNC_REMOTE_PATH_UAT}"
+      - rsync -hrvz src/ "${RSYNC_REMOTE_PATH_UAT}"
