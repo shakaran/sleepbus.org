@@ -21,12 +21,7 @@
           servers
  */
 
-if (gethostname() == 'server.sleepbus.org') {
-    $config['base_url'] = 'http://test.sleepbus.org';
-} else {
-    $config['base_url'] = 'http://localhost:8080';
-}
-
+$config['base_url'] = getenv('BASE_URL');
 /*
 |--------------------------------------------------------------------------
 | Index File
