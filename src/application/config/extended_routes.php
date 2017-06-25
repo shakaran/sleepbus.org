@@ -74,6 +74,14 @@
     $route['helping-the-homeless'] = 'campaign/show/helping-the-homeless';
     $route['byronshire'] =  'campaign/show/byronshire';
     $route['sleep-50-for-my-50th-please'] =  'campaign/show/sleep-50-for-my-50th-please';
+    $route['a-warm-safe-bed'];
+    $route['perth'];
+    $route['sleepbus'];
+    $route['slumber-party-for-sleepbus'];
+    $route['grace-sleepbus'];
+    $route['testing-campaign-after-migration'];
+    $route['qlik'];
+    $route['stroll-to-the-shack-for-sleepbus'];
 
      if((preg_match("/\/blog\//i", $_SERVER['REQUEST_URI'])))
      {
