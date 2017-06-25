@@ -588,6 +588,10 @@ class MY_Controller extends CI_Controller {
     $emailConfig['smtp_port'] = getenv('SMTP_PORT');
     $emailConfig['smtp_user'] = getenv('SMTP_USER');
     $emailConfig['smtp_pass'] = getenv('SMTP_PASS');
+    $emailConfig['mailtype'] = 'html';
+    $emailConfig['starttls'] = true;
+    $emailConfig['newline'] = "\r\n";
+
 
     $this->load->library('email');
 
