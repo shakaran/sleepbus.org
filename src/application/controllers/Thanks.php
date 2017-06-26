@@ -56,4 +56,13 @@ class Thanks extends MY_Controller
    $this->load->view('thanks/thanks',$this->data);
    $this->load->view('templates/footer');
   }
+
+  public function volunteer_signup_thanks()
+  {
+   $this->data['meta'] = array('page_title' => "You're Awesome! - sleepbus");
+
+   $this->load->view('templates/header',$this->data);
+   $this->load->view('thanks/volunteer-signup-thanks',$this->data);
+   $this->load->view('templates/footer');
+  }
  }

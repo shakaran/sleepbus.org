@@ -270,6 +270,41 @@
    $attribute['submit']=array('type' => 'submit', 'name' => 'form_submit','id'=>'form_submit','value'=>'Join',"class"=>"btn btn-primary");
    return $attribute;
   }
+
+  public function VolunteerFormAttribute($values) {
+    if(count($values) == 0) {
+      $values=array('name' => '', 'email' => '');
+    }
+	  
+    $attribute['form'] = array(
+      'id' => 'volunteer_frm',
+      'name' => 'volunteer_frm',
+      'onSubmit' => 'return ValidateVolunteerForm();');
+
+    $attribute['name'] = array(
+      'name' => 'volunteer_name',
+      'id' => 'volunteer_name',
+      'value' => $values['name'],
+      'placeholder' => 'Name',
+      'class' => "form-control");
+ 
+    $attribute['email'] = array(
+      'name' => 'volunteer_email',
+      'id' => 'volunteer_email',
+      'value' => $values['email'],
+      'placeholder' => 'Email',
+      'class' => "form-control");
+
+    $attribute['submit'] = array(
+      'type' => 'submit',
+      'name' => 'form_submit',
+      'id' => 'form_submit',
+      'value' => 'Join',
+      "class" => "btn btn-primary");
+
+    return $attribute;
+  }
+
   public function InsertSubscribe($data)
   {
    $this->db->insert('newsletters_subscribers',$data);
@@ -279,6 +314,18 @@
   {
    $this->db->insert('newsletter_subscribers_groups',$data1);
    return $lastid=$this->db->insert_id();
+  }
+
+  public function InsertVolunteer($data) {
+    $this->db->insert('volunteers', $data);
+
+    return $lastid = $this->db->insert_id();
+  }
+
+  public function InsertVolunteerGroup($data1) {
+    $this->db->insert('volunteers_groups', $data1);
+
+    return $lastid = $this->db->insert_id();
   }
   
   public function getIsSubscribed($email)
@@ -295,6 +342,19 @@
 	return false;
    }
   }
+
+  public function getIsVolunteer($email) {
+    $sql = "select * from volunteers where email1 like '$email' or email2 like '$email'";
+    $query = $this->db->query($sql);
+    $clientimage = array();
+
+    if($query->num_rows() > 0) {
+      return true;
+    }
+
+    return false;
+  }
+
   public function MediaItems()
   {
    $sql="select media_title,url,publication,date_format(date_display,'%d %b %Y') as item_date from ".MEDIA_ITEMS." where status='1' order by position";

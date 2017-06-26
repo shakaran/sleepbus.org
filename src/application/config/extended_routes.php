@@ -21,8 +21,7 @@
     case  "connect" : $route['connect']="connect";	break;
     case  "enewsletter-thanks" : $route['enewsletter-thanks']="thanks/enewsletter-thanks";	break;
     case  "enewsletter-signup" : $route['enewsletter-signup']="enewsletter";	break;
-    case  "volunteer-signup-thanks" : $route['volunteer-signup-thanks']="thanks/volunteer-signup-thanks";	break;
-    case  "volunteer" : $route['volunteer']="volunteer";	break;
+    case  "volunteer-signup-thanks" : $route['volunteer-signup-thanks'] = "thanks/volunteer-signup-thanks";	break;
     case  "sitemap" : $route['sitemap']="generalpages/sitemap";	break;
     case  "privacy-policy" : $route['privacy-policy']="generalpages/privacy-policy";	break;
     case  "meet-the-board" : $route['meet-the-board']="generalpages/meet-the-board";	break;
