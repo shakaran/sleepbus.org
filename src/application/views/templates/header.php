@@ -89,7 +89,7 @@
   ><div class="headerVolunteersNeeded__sleepBusIcon"></div
   ><div class="headerVolunteersNeeded__container">
     <div class="headerVolunteersNeeded__msg">Melbourne VOLUNTEERS required for various roles. Can you help?</div>
-    <div class="headerVolunteersNeeded__details"><a href="#">Click here for more details and to get on the roster.</a></div>
+    <div class="headerVolunteersNeeded__details"><a href="/volunteer">Click here to join the volunteer database.</a></div>
   </div
 ></div>
 
