@@ -11,11 +11,22 @@
 
 <h1>Volunteer</h1>
 
-<p>Keep up to date with the latest volunteering opportunities here.</p>
+<p><b>Keep up to date with the latest volunteering opportunities here.</b></p>
 
-<div class="contactfbbox2"><img alt="" src="https://www.sleepbus.org/images/icon12.png" /></div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4"></div>
+  	<div class="col-md-4 text-center">
+				<a href="https://www.facebook.com/sleepbusaustralia" target="_blank"><img src="/images/fb2.png" height=54 style="margin-right:32px;" /></a>
+				<a href="https://twitter.com/sleepbus" target="_blank"><img src="/images/twitter-hover.png" height=54 /></a>
+		</div>
+  	<div class="col-md-4"></div>
+	</div>
+</div>
 
-<p>Or, sign up to our Volunteers database now.</p>
+<br />
+
+<p><b>Or, sign up to our Volunteers database now.</b></p>
 
 
 
