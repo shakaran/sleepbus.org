@@ -107,3 +107,9 @@ Need clarification of function/necessity:
  - news
 
 *some of the above, along with other tables in the database can likely be removed from the project*
+
+### Thanks to volunteer contributors!
+
+These people have helped in small and large ways to bring the purpose of sleepbus to its audience. Many thanks to you all and I hope this list is soon too large for this page!
+
+[@guitarino](https://github.com/guitarino), [@bakersemail](https://github.com/bakersemail)
