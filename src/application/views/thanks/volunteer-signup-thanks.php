@@ -11,6 +11,8 @@
         <p style="font-size:40px;">Thank you for your support.</p>
 
 				<p style="font-size:40px;">We will be in touch shortly with more details.</p>
+
+				<p style="font-size:40px;">Simon.</p>
 			</div>
 
 			<div class="col-md-2">
