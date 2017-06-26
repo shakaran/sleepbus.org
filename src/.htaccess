@@ -2,6 +2,10 @@ Options +FollowSymLinks
 RewriteEngine on
 RewriteBase /
 
+# redirect naked domain to www
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
 ### re-direct index.html to root / ###
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.html\ HTTP/
 RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
