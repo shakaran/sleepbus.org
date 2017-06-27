@@ -68,8 +68,11 @@ class Home extends MY_Controller
 
    $this->data['section_id']=1;
    $this->data['meta']=$this->Metatags_model->GetMetaTags('SINGLE_PAGE',$this->data['section_id'],'Home');
-   $this->data['cta']=$this->Website_model->GetCTAButtons('SINGLE_PAGE',$this->data['section_id']);
-   
+//   $this->data['cta']=$this->Website_model->GetCTAButtons('SINGLE_PAGE',$this->data['section_id']);
+  
+
+
+ 
    $this->data['contents']=$this->Website_model->GetPageContent($this->data['section_id']);
    $this->data['top_message']=$this->data['contents']['intro_text'];
    $this->websitejavascript->include_footer_js=array('RecurringDonationJs');
