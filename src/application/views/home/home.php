@@ -46,28 +46,37 @@
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<div class="container">
-<div class="row donateh2">
-<h2>Here are three ways you can get involved</h2>
+	<div class="container">
+		<div class="row donateh2">
+			<h2>Here are three ways you can get involved</h2>
 
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 donatehome cta4home">
-<div class="donatehomeimg"><img alt="" src="https://www.sleepbus.org/images/icon1.png" /></div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 donatehome cta4home">
+				<div class="donatehomeimg">
+					<img alt="" src="https://www.sleepbus.org/images/icon1.png" />
+				</div>
 
-<p>For $27.50 you can give a good night&rsquo;s sleep.</p>
-<a class="btn btn-primary" href="https://www.sleepbus.org/donate">Donate</a></div>
+				<p>For $27.50 you can give a good night&rsquo;s sleep.</p>
+				<a class="btn btn-primary" href="https://www.sleepbus.org/donate">Donate</a>
+			</div>
 
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 donatehome cta4home">
-<div class="donatehomeimg"><img alt="" src="https://www.sleepbus.org/images/icon2.png" /></div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 donatehome cta4home">
+				<div class="donatehomeimg">
+					<img alt="" src="https://www.sleepbus.org/images/icon2.png" />
+				</div>
 
-<p>Pledge your next Birthday for safe sleeps.</p>
-<a class="btn btn-success" href="https://www.sleepbus.org/pledge">PLEDGE</a></div>
+				<p>Pledge your next Birthday for safe sleeps.</p>
+				<a class="btn btn-success" href="https://www.sleepbus.org/pledge">PLEDGE</a>
+			</div>
 
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 donatehome cta4home">
-<div class="donatehomeimg"><img alt="" src="https://www.sleepbus.org/images/icon3.png" /></div>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 donatehome cta4home">
+				<div class="donatehomeimg">
+					<img alt="" src="https://www.sleepbus.org/images/icon3.png" />
+				</div>
 
-<p>Do something crazy or creative to raise money.</p>
-<a class="btn btn-info" href="https://www.sleepbus.org/fundraise">FUNDRAISE</a></div>
-</div>
+				<p>Do something crazy or creative to raise money.</p>
+				<a class="btn btn-info" href="https://www.sleepbus.org/fundraise">FUNDRAISE</a>
+			</div>
+	</div>
 </div>
 </div>
 

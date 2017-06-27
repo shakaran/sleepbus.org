@@ -8381,3 +8381,16 @@ footer{padding:20px 0;}
     top: -48px;
     visibility: hidden;
 }
+
+.btn-pledge, .btn-partnership {
+  background-color: #8dc63f !important;
+  border-color: #8dc63f !important;
+}
+
+.btn-fundraise, .btn-connect {
+  background-color: #f41e41 !important;
+  border-color: #f41e41 !important;
+}
+
+
+
