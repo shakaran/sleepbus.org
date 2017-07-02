@@ -65,7 +65,7 @@
 				</div>
 
 				<p>Pledge your next Birthday for safe sleeps.</p>
-				<a class="btn btn-success" href="https://www.sleepbus.org/pledge">PLEDGE</a>
+				<a class="btn btn-primary btn-pledge" href="https://www.sleepbus.org/pledge">PLEDGE</a>
 			</div>
 
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 donatehome cta4home">
