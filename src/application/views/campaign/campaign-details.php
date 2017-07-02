@@ -36,7 +36,7 @@
 	 if($loggedin_user == $campaign_details['username'])
 	 {
 	  ?>
-      <a class="btn btn-success" href="<?php echo base_url();?>fundraise/<?php echo $campaign_details['url'];?>">edit campaign</a>
+      <a class="btn btn-primary btn-pledge" href="<?php echo base_url();?>fundraise/<?php echo $campaign_details['url'];?>">edit campaign</a>
       <?php
 	 }
 	 ?> 
