@@ -65,9 +65,9 @@
      <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 campaignleft">
       <div class="row">
       	<div class="raisedbox">
-             <div class="raisedtext"><sup>$</sup><?php if($campaign_details['total_raise'] > 0){ $raisedamount = number_format(($campaign_details['total_raise']),2); echo 
+             <div class="raisedtext">
+								$<?php if($campaign_details['total_raise'] > 0){ $raisedamount = number_format(($campaign_details['total_raise']),2); echo 
 	             $raisedamount;}else{?>0<?php }?><sub>Raised</sub></div> 
-         <!--    <p><img src="<?php echo base_url();?>images/user.png" alt=""><?php if($campaign_details['total_raise'] > 0){ echo floor($campaign_details['total_raise']/$common_settings['unit_fund']);}else{?>0<?php }?> people will get a safe night’s sleep</p>-->
          <p><img src="<?php echo base_url();?>images/user.png" alt=""><?php if($campaign_details['total_raise'] > 0){ echo floor($campaign_details['total_raise']/27.50);}else{?>0<?php }?> people will get a safe night’s sleep</p>
              <?php
               if($campaign_details['status'] == '1')
