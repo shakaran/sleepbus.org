@@ -113,3 +113,15 @@ Need clarification of function/necessity:
 These people have helped in small and large ways to bring the purpose of sleepbus to its audience. Many thanks to you all and I hope this list is soon too large for this page!
 
 [@guitarino](https://github.com/guitarino), [@bakersemail](https://github.com/bakersemail)
+
+### Thanks to our service donators!
+
+These companies have offered their services for free to our open source/non-profit project.
+
+ - [BrowserStack](https://www.browserstack.com)
+
+![BrowserStack Logo](https://raw.githubusercontent.com/sleepbusorg/sleepbus.org/master/src/images/browserstack_logo.png)
+
+BrowserStack is an awesome service that sleepbus's developers have used on other big projects in the past. It allows you to run automated tests against a myriad of modern browser/device combinations, even behind a private network. Live test sessions can also be performed in the browser, when you want to quickly check how a page looks in a certain device/browser/resolution combination. Thanks for your support on this project!
+
+
