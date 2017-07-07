@@ -39,6 +39,7 @@
     {
      $route['reset-password/(:any)']="account/reset-password/$1";
 
+    $route['campaigns/getMoreRecords'] = "campaign/getMoreRecords";
     $route['campaign/(:any)'] = "campaign/show/$1";
 
     /*
