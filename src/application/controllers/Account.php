@@ -88,30 +88,23 @@ class Account extends MY_Controller
         }
     }
 
-
     public function signup($type='', $package_id='')
     {
         $values = array();
-
         $caller = $this->input->post('caller');
 
-        if ($caller == "Send") {
+        if ( $caller == "Send" ) {
             $form_token = $this->session->userdata('form_token');
 
-            if (!isset($form_token)) {
-                $this->RedirectPage();
-                exit;
-            } else if(isset($form_token) && $form_token != 'signup') {
-                $this->RedirectPage();
-                exit;
+            if ( !isset($form_token) ) {
+                $this->RedirectPage(); exit;
+            } else if( isset($form_token ) && $form_token != 'signup') {
+                $this->RedirectPage(); exit;
             }
 
-            if(!preg_match('/'.$_SERVER['HTTP_HOST'].'/',$_SERVER['HTTP_REFERER'])) {
-                $this->RedirectPage();
-                exit;
+            if( !preg_match('/'.$_SERVER['HTTP_HOST'].'/',$_SERVER['HTTP_REFERER']) ) {
+                $this->RedirectPage(); exit;
             }
-
-            //$values['agree']=$this->input->post('agree');
 
             $values['full_name'] = $this->input->post('full_name');
             $values['email'] = $this->input->post('email');
@@ -119,7 +112,6 @@ class Account extends MY_Controller
             $values['account_type'] = $this->input->post('account_type');
             $values['other_type'] = $this->input->post('other_type');
             $values['newsletter_subscription'] = $this->input->post('newsletter_subscription');
-
             $this->load->library('form_validation');
             $this->form_validation->set_error_delimiters('<span>', '</span>');
             $this->form_validation->set_message('required', '%s');
@@ -130,35 +122,30 @@ class Account extends MY_Controller
             $this->form_validation->set_rules('email', 'Please enter email', 'trim|required|valid_email|is_unique['.USERS.'.email]');
             $this->form_validation->set_rules('password', 'Please enter password', 'callback__value_required[password]|callback__validate_password');
 
-            if($values['account_type'] == "other") {
+            if( $values['account_type'] == "other" ) {
                 $this->form_validation->set_rules('other_type', 'Please specify your other type', 'trim|required');
             }
-  //  $this->form_validation->set_rules('agree','Please check the consent of your age', 'trim|required');
 
-
-            if ($this->form_validation->run() == TRUE)
-            {
+            if ( $this->form_validation->run() == TRUE ) {
                 $records=array();
                 $records['full_name'] = $this->commonfunctions->ReplaceSpecialChars($values['full_name']);
                 $records['email'] = $values['email'];
                 $records['password'] = password_hash($values['password'], PASSWORD_DEFAULT);
                 $records['account_type'] = $values['account_type'];
 
-                if ($records['account_type'] == "other") {
+                if ( $records['account_type'] == "other" ) {
                     $records['other_type'] = $this->commonfunctions->ReplaceSpecialChars($values['other_type']);
                 }
 
                 $this->Account_model->InsertUserInformation($records);
 
-                if ($values['newsletter_subscription'] == '1')
-                {
+                if ( $values['newsletter_subscription'] == '1' ) {
                     $IsSubscribed = $this->Website_model->getIsSubscribed($records['email']);
 
-                    if ($IsSubscribed != true) {
+                    if ( $IsSubscribed != true ) {
                         $data = array('fname' => $this->commonfunctions->ReplaceSpecialChars($records['full_name']), 'email1' => $records['email']);
 
                         $subscribe = $this->Website_model->InsertSubscribe($data);
-
                         $data1 = array('subscriber_id' => $subscribe, 'group_id' => 1);
                         $subscribe = $this->Website_model->InsertSubscribeGroup($data1);
                     }
@@ -167,23 +154,21 @@ class Account extends MY_Controller
                 $session_values = array("site_username" => $values['email'], "site_password" => $values['password']);
                 $this->session->set_userdata($session_values);
 
-                if (!empty($records['account_type']) and ($records['account_type'] != "other")) {
+                if ( !empty($records['account_type']) and ($records['account_type'] != "other") ) {
                     $account = $this->Account_model->GetAccountTypeDetails($records['account_type']);
                     $records['account_type'] = $account['type_name'];
                 }
 
+								// TODO: bring these templates within codebase, not stored in db
                 $this->SendMessageToAdmin($records);
                 $this->SendMessageToUser($records);
-
                 $this->session->unset_userdata('form_token');
-
                 $campaign_records = array();
                 $campaign_records = $this->session->userdata('campaign_records');
-
                 $birthday_pledge = array();
                 $birthday_pledge = $this->session->userdata('birthday_pledge');
                 
-                if((count($campaign_records) > 0) or (count($birthday_pledge) > 0) ) {
+                if( (count($campaign_records) > 0) or (count($birthday_pledge) > 0) ) {
                     $this->RedirectPage('user/save');
                 } else {
                     $this->RedirectPage('user/home');
@@ -191,16 +176,14 @@ class Account extends MY_Controller
             }
 
         } else {  // if ($caller == "Send")
-        $this->session->set_userdata('form_token', 'signup');
-    }
+					$this->session->set_userdata('form_token', 'signup');
+    		}
 
     $this->data['page_heading'] = $this->Website_model->GetPageHeading(1);
-
     $this->data['meta'] = $this->Metatags_model->GetMetaTags('SINGLE_PAGE', '23', 'Sign Up');
     $this->data['cta'] = $this->Website_model->GetCTAButtons('SINGLE_PAGE', '23');
     $this->websitejavascript->include_footer_js = array('AccountSignUpJs');
     $this->data['attributes'] = $this->Account_model->GetSignUpFormAttributes($values);
-
     $this->load->view('templates/header', $this->data);
     $this->load->view('account/signup', $this->data);
     $this->load->view('templates/footer');
