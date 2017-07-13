@@ -616,7 +616,34 @@ class MY_Controller extends CI_Controller {
     $this->email->clear();
     
   }
-  
+
+  public function SendSignUpEmailToAdmin($records) {
+    $emailTemplate = $this->load->view('email/user_signup_confirmation_admin', $records, TRUE);
+
+    $subject = 'A new user has joined the sleepbus family!';   
+
+    $emailConfig['protocol'] = getenv('PROTOCOL');
+    $emailConfig['smtp_host'] = getenv('SMTP_HOST');
+    $emailConfig['smtp_port'] = getenv('SMTP_PORT');
+    $emailConfig['smtp_user'] = getenv('SMTP_USER');
+    $emailConfig['smtp_pass'] = getenv('SMTP_PASS');
+    $emailConfig['mailtype'] = 'html';
+    $emailConfig['starttls'] = true;
+    $emailConfig['newline'] = "\r\n";
+
+    $this->load->library('email');
+
+    $this->email->initialize($emailConfig);
+    
+    $this->email->from(getenv('EMAIL_SEND_FROM'));
+    $this->email->to(getenv('ADMIN_EMAIL'), 'web@sleepbus.org');
+    $this->email->subject($subject);
+    $this->email->set_mailtype('html');
+    $this->email->message($emailTemplate);
+    $this->email->send();
+    $this->email->clear();
+  }
+
   public function SendMail($mailBody,$reply_to,$email_setting_id,$other_info='')
   {
    // You can make a condition with 'other info'(optional variable). 
