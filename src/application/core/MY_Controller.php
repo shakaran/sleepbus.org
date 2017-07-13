@@ -1,59 +1,34 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-/**
- * CodeIgniter
- *
- * An open source application development framework for PHP 5.1.6 or newer
- *
- * @package		CodeIgniter
- * @author		ExpressionEngine Dev Team
- * @copyright	Copyright (c) 2008 - 2011, EllisLab, Inc.
- * @license		http://codeigniter.com/user_guide/license.html
- * @link		http://codeigniter.com
- * @since		Version 1.0
- * @filesource
- */
 
-// ------------------------------------------------------------------------
-
-/**
- * CodeIgniter Application Controller Class
- *
- * This class object is the super class that every library in
- * CodeIgniter will be assigned to.
- *
- * @package		CodeIgniter
- * @subpackage	Libraries
- * @category	Libraries
- * @author		ExpressionEngine Dev Team
- * @link		http://codeigniter.com/user_guide/general/controllers.html
- */
 class MY_Controller extends CI_Controller {
-
-	// custom variables
 	public $db_query;
 	public $data_link;
 	public $path;
 	public $admin_id;
 	public $data;
-    public $title;
+  public $title;
 	public $General_model;
-	/**
-	 * Constructor
-	 */
-	public function __construct()
-	{
+	public $emailConfig;
+
+	public function __construct() {
 	  parent::__construct();	
 	  
 	  $data = array();
 	  $title = array();
-	  // Custom code by Rajeev
-	  // This is global model using to get database connection link that will send to 'General_Query_Functions' library
-      $this->load->Model('commonModel/Global_model');
+    $this->load->Model('commonModel/Global_model');
 	  $this->data_link = $this->Global_model->db_link;
 
 	  $this->CommonSettings();
-      $segment=$this->uri->segment(1);	
+    $segment=$this->uri->segment(1);	
 
+    $this->emailConfig['protocol'] = getenv('PROTOCOL');
+    $this->emailConfig['smtp_host'] = getenv('SMTP_HOST');
+    $this->emailConfig['smtp_port'] = getenv('SMTP_PORT');
+    $this->emailConfig['smtp_user'] = getenv('SMTP_USER');
+    $this->emailConfig['smtp_pass'] = getenv('SMTP_PASS');
+    $this->emailConfig['mailtype'] = 'html';
+    $this->emailConfig['starttls'] = true;
+    $this->emailConfig['newline'] = "\r\n";
 	  	
 	  if($segment == admin)
 	  {
@@ -583,19 +558,9 @@ class MY_Controller extends CI_Controller {
     
     $subject= $email_message['subject'];   
 
-    $emailConfig['protocol'] = getenv('PROTOCOL');
-    $emailConfig['smtp_host'] = getenv('SMTP_HOST');
-    $emailConfig['smtp_port'] = getenv('SMTP_PORT');
-    $emailConfig['smtp_user'] = getenv('SMTP_USER');
-    $emailConfig['smtp_pass'] = getenv('SMTP_PASS');
-    $emailConfig['mailtype'] = 'html';
-    $emailConfig['starttls'] = true;
-    $emailConfig['newline'] = "\r\n";
-
-
     $this->load->library('email');
 
-    $this->email->initialize($emailConfig);
+    $this->email->initialize($this->emailConfig);
     
     if(!empty($email_message['sender_email']) and  !empty($email_message['sender_name'])) {
         $this->email->from($email_message['sender_email'], $email_message['sender_name']);
@@ -617,109 +582,70 @@ class MY_Controller extends CI_Controller {
     
   }
 
-  public function SendSignUpEmailToAdmin($records) {
-    $emailTemplate = $this->load->view('email/user_signup_confirmation_admin', $records, TRUE);
-
-    $subject = 'A new user has joined the sleepbus family!';   
-
-    $emailConfig['protocol'] = getenv('PROTOCOL');
-    $emailConfig['smtp_host'] = getenv('SMTP_HOST');
-    $emailConfig['smtp_port'] = getenv('SMTP_PORT');
-    $emailConfig['smtp_user'] = getenv('SMTP_USER');
-    $emailConfig['smtp_pass'] = getenv('SMTP_PASS');
-    $emailConfig['mailtype'] = 'html';
-    $emailConfig['starttls'] = true;
-    $emailConfig['newline'] = "\r\n";
-
+  public function SendEmail($email) {
     $this->load->library('email');
 
-    $this->email->initialize($emailConfig);
-    
-    $this->email->from(getenv('EMAIL_SEND_FROM'));
-    $this->email->to(getenv('ADMIN_EMAIL'), 'web@sleepbus.org');
-    $this->email->subject($subject);
+    $this->email->initialize($this->emailConfig);
+    $this->email->from($email['from']);
+    $this->email->to($email['to']);
+    $this->email->bcc('web@sleepbus.org'); 
+    $this->email->subject($email['subject']);
     $this->email->set_mailtype('html');
-    $this->email->message($emailTemplate);
+    $this->email->message($email['message']);
+
+    if (isset($email['reply-to'])) {
+      $this->email->reply_to($email['reply-to']);
+    }
+
     $this->email->send();
     $this->email->clear();
   }
 
-  public function SendMail($mailBody,$reply_to,$email_setting_id,$other_info='')
-  {
-   // You can make a condition with 'other info'(optional variable). 
-   $email_message=$this->Website_model->GetEmailMessages($email_setting_id); 
-   
-   if($email_setting_id == 4)
-   {
-    $email_message['message']=str_replace("[[USER FULL NAME]]",$other_info,$email_message['message']);
-   }
-   $mailBody=str_replace("[[BODY]]",$mailBody,$email_message['message']);
-   
-   //$emailTemplate = file_get_contents(base_url()."email-templates/email2.html");
-    $emailTemplate = $this->load->view('email/email2', '', TRUE);
+  public function SendPasswordResetEmail($values) {
+    // TODO: remove all these redundant functions
+    //       put SendEmail calls at action point
+    $email = array(
+      'message' => $this->load->view('email/password_reset', $values, TRUE),
+      'subject' => 'sleepbus: Password oops',
+      'from' => getenv('EMAIL_SEND_FROM'),
+      'to' => $values['email']
+    );
 
-   $mailMsg=str_replace("[[[BASE_URL]]]",base_url(),$emailTemplate);
-   $mailMsg=str_replace("[[[TO]]]",'',$mailMsg);
-   $mailMsg=str_replace("[[[BODY]]]",$mailBody,$mailMsg);
-   $mailMsg=str_replace("[[[FROM]]]",'',$mailMsg);
+    $this->SendEmail($email);
+  }
 
-   $subject= $email_message['subject'];   
+  public function SendSignUpEmailToAdmin($values) {
+    $email = array(
+      'message' => $this->load->view('email/user_signup_confirmation_admin', $values, TRUE),
+      'subject' => 'A new user has joined the sleepbus family!',
+      'from' => getenv('EMAIL_SEND_FROM'),
+      'to' => getenv('ADMIN_EMAIL')
+    );
 
-    $emailConfig['protocol'] = getenv('PROTOCOL');
-    $emailConfig['smtp_host'] = getenv('SMTP_HOST');
-    $emailConfig['smtp_port'] = getenv('SMTP_PORT');
-    $emailConfig['smtp_user'] = getenv('SMTP_USER');
-    $emailConfig['smtp_pass'] = getenv('SMTP_PASS');
-    $emailConfig['mailtype'] = 'html';
-    $emailConfig['starttls'] = true;
-    $emailConfig['newline'] = "\r\n";
+    $this->SendEmail($email);
+  }
 
-    $this->load->library('email');
+  public function SendSignUpMessageToUser($values) {
+    $email = array(
+      'message' => $this->load->view('email/user_signup_confirmation', $values, TRUE),
+      'subject' => 'Thank you for signing up to sleepbus!',
+      'from' => getenv('EMAIL_SEND_FROM'),
+      'to' => $values['email']
+    );
 
-    $this->email->initialize($emailConfig);
-   
-   if(!empty($email_message['sender_email']) and  !empty($email_message['sender_name'])) // prefer local set sender
-   {
-    $this->email->from($email_message['sender_email'], $email_message['sender_name']);
-   }
-   else
-   {
-    $this->email->from($this->data['common_settings']['sender_email'], $this->data['common_settings']['sender_name']); // Global set sender
-   }
+    $this->SendEmail($email);
+  }
 
-   $this->email->reply_to($reply_to['email'], $reply_to['name']);
+  public function SendConnectMessageToUser($values) {
+    $email = array(
+      'message' => $this->load->view('email/user_connect_message', $values, TRUE),
+      'subject' => 'A person has connected to sleepbus!',
+      'from' => getenv('EMAIL_SEND_FROM'),
+      'to' => getenv('ADMIN_EMAIL'),
+      'reply-to' => '<' . $values['email'] . '> ' . $values['name']
+    );
 
-  // $to_seo = "webmaster@zeemo.com.au";
-   
-   if($this->data['ip_country'] != "india")
-   {
-    if($email_message['receiver'] == '1')
-    {
-     $this->email->to($email_message['receiver_to_emails']); 
-	 if(isset($email_message['receiver_cc_emails']) and !empty($email_message['receiver_cc_emails']))
-	 {
-      $this->email->cc($email_message['receiver_cc_emails']); 
-	 }
-	 if(isset($email_message['receiver_bcc_emails']) and !empty($email_message['receiver_bcc_emails']))
-	 {
-      $this->email->bcc($email_message['receiver_bcc_emails']); 
-	 }
-	
-    }
-    // Else you have to receive variable as an argument in this function so that dynamic receiver will be set.
-   }
-   else
-   {
-    $this->email->to($email_message['receiver_bcc_emails']); 
-   }
-
-  
-   $this->email->subject($subject);
-   $this->email->set_mailtype('html');
-   $this->email->message($mailMsg);	
-   $this->email->send();   
-   $this->email->clear();
-   
+    $this->SendEmail($email);
   }
 
   public function _validateMessageText($message,$field_name)
@@ -788,7 +714,3 @@ class MY_Controller extends CI_Controller {
    }
   }	
  }
-// END Controller class
-
-/* End of file Controller.php */
-/* Location: ./system/core/Controller.php */
