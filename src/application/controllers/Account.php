@@ -159,8 +159,8 @@ class Account extends MY_Controller
                     $records['account_type'] = $account['type_name'];
                 }
 
-    						$this->SendSignUpMessageToAdmin($records);
-                $this->SendMessageToUser($records);
+								$this->SendSignUpEmailToAdmin($records);
+    						$this->SendSignUpMessageToUser($records);
                 $this->session->unset_userdata('form_token');
                 $campaign_records = array();
                 $campaign_records = $this->session->userdata('campaign_records');
@@ -306,72 +306,6 @@ public function _value_required($field_value, $field) {
     }
 }
 
-public function SendMessageToUser($values) {
-    // Mail to user
-    if(trim($values['account_type']) == "other") {
-        $values['account_type'] == "other : " . $values['other_type'];
-    }
-
-    $mailBody = "<div style='clear:both;'></div>
-    <div style='margin:0px; padding-top:12px; padding-bottom:12px;background:#fff;color:#000;'>
-       <div style='float:left; width:200px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px; color:#000;'>Username:</div> <div style='float:left; width:440px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px; color:#000;'>".$values['email']."</div>
-
-       <div style='clear:both;'></div>
-
-       <div style='float:left; width:200px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000;'>Account Type:</div> <div style='float:left; width:440px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000;'>".$values['account_type']."</div>
-
-       <div style='clear:both;'></div>
-       <div style='clear:both;'></div></div>";
-/*   $reply_to=array();
-    $reply_to['email']='';
-    $reply_to['name']='';
-*/
-    $this->SendMailToUser($mailBody, $values, 4, $other_info='');
-}
-
-
-public function SendMessageToAdmin($values) {
-    // Mail to admin
-    if($values['account_type'] == "other") {
-        $values['account_type'] == "other : " . $values['other_type'];
-    }
-
-    $mailBody = "<div style='clear:both;'></div>
-    <div style='margin:0px; padding-top:12px; padding-bottom:12px;background:#fff;color:#000;'>
-       <div style='float:left; width:200px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px; color:#000;'>Name:</div> <div style='float:left; width:440px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px; color:#000;'>" . $values['full_name'] . "</div>
-
-
-       <div style='clear:both;'></div>
-
-       <div style='float:left; width:200px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000;'>Email:</div> <div style='float:left; width:440px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000'>" . $values['email'] . "</div>
-
-       <div style='clear:both;'></div>
-
-       <div style='float:left; width:200px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000;'>Account Type:</div> <div style='float:left; width:440px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000'>" . $values['account_type'] . "</div>
-
-
-       <div style='clear:both;'></div>
-
-
-       <div style='clear:both;'></div></div>";
-
-    $reply_to = array();
-    $reply_to['email'] = $values['email'];
-    $reply_to['name'] = $values['full_name'];
-
-    $this->SendMail($mailBody, $reply_to, 3);
-}
-
-public function SendSignUpMessageToAdmin($values) {
-		// TODO: test other account types being sent
-    if($values['account_type'] == "other") {
-        $values['account_type'] == "other : " . $values['other_type'];
-    }
-
-    $this->SendSignUpEmailToAdmin($values);
-}
-
-
 public function forgot_password() {
     $values = array();
 
@@ -393,7 +327,8 @@ public function forgot_password() {
             $records['reset_link'] = bin2hex(openssl_random_pseudo_bytes(32));
 
             $this->Account_model->UpdateForgotPassword($records, $values['email']);
-            $this->SendResetPasswordMessage($values, $records['reset_link']);
+						$values['reset_link'] = $records['reset_link'];
+						$this->SendPasswordResetEmail($values);
 
             $this->RedirectPage('forgot-password-thanks');
         }
@@ -424,76 +359,7 @@ public function _is_exist($email) {
 
         return false;
     }
-}
+	}
 
 
-public function SendResetPasswordMessage($values, $reset_link) {
-    $mailBody="<div style='background:#fff; padding:10px;background:#fff;color:#000;'> 
-    <p style='font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal;'> Please <a href='".base_url()."account/reset-password/".$reset_link."'>click here</a> to reset your password </p> 
-    <div style='clear:both;'></div>
-</div>";
-
-/*  $reply_to=array();
-    $reply_to['email']=$values['email'];
-    $reply_to['name']=$values['name'];
-*/   
-    $this->SendMailToUser($mailBody, $values, 5);
-
-}
-
-  /*public function confirm($confirmation_code='')
-  {
-   if(empty($confirmation_code))
-   {
-    $this->error();
-   }
-   else
-   {
-    $confirm_values=$this->Account_model->GetConfirmationInfo($confirmation_code);
-    if(count($confirm_values) == 0) $this->error();
-    else
-    {
-     if($confirm_values['status'] == 1){$this->data['message_settings']="<div class='agree'>Your account is already verified. Please <a href='".base_url()."account/signin'>click here </a> to login to your account</div>";}
-     else if($confirm_values['status'] == 2)
-     {
-      $message_settings=$this->Website_model->GetMessageSettings();
-      if($confirm_values['type_id'] == 1)
-      {
-       $this->data['message_settings']=$message_settings['signup_user_confirmation_msg'];
-      }
-      else
-      {
-       $this->data['message_settings']=$message_settings['signup_confirmation_msg'];
-      }
-      if($confirm_values['type_id'] == 1)
-      {
-       $this->Account_model->UpdateSignUpUserStatus($confirm_values['id']);
-      }
-      else
-      {
-       $this->Account_model->UpdateSignUpStatus($confirm_values['id']);
-      }
-
-
-
-     }
-     else
-     {
-      $this->error();
-     }
-    }
-    if(!empty($this->data['message_settings']))
-    {
-     $this->data['meta']=$this->Metatags_model->GetMetaTags('SINGLE_PAGE','30','Sign up confirmation');
-     $this->data['cta_buttons']=$this->Website_model->GetCTAButtons('SINGLE_PAGE','30'); 
-     $this->data['page_heading']=$this->Website_model->GetPageHeading(7);
-     $this->data['footer_banner']=$this->Website_model->GetFooterBanner('signup',0);
-     $this->load->view('templates/header',$this->data);
-     $this->load->view('account/signup-confirmation',$this->data);
-     $this->load->view('templates/footer');
-    }
-    
-    
-   }
-}*/
 }

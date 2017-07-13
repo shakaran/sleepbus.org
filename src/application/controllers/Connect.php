@@ -1,137 +1,86 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class Connect extends MY_Controller
- {
-  function __construct()
-  {
-   parent :: __construct();
+
+class Connect extends MY_Controller {
+  function __construct() {
+    parent :: __construct();
   }
-  public function index()
-  {
-   $caller=$this->input->post('caller'); 
-   $values=array(); 
-   if($caller == "Send")
-   {
-	$form_token = $this->session->userdata('form_token');
-    if(!isset($form_token)) { $this->RedirectPage(); exit; }
-	else if(isset($form_token) && $form_token != 'contact') { $this->RedirectPage(); exit; }
-	   
-    if(!preg_match('/'.$_SERVER['HTTP_HOST'].'/',$_SERVER['HTTP_REFERER']))
-    {
-     $this->RedirectPage(); exit;
-    }	   
-    $values['name']=$this->input->post('name');
-    $values['email']=$this->input->post('email');
-    $values['phone']=$this->input->post('phone');
-	$values['message']=$this->input->post('message');
-	$values['hear_about_us']=$this->input->post('hear_about_us');
-    $this->load->library('form_validation'); 
-	$this->form_validation->set_message('valid_email','Please enter a valid email id');
 
-    $this->form_validation->set_rules('name','name','trim|callback__value_required[name]');//field name~caption
-    $this->form_validation->set_rules('phone','contact number', 'trim|callback__value_required[phone]|callback__validatePhone[contact number]');
-    $this->form_validation->set_rules('email','email','trim|callback__value_required[email]|valid_email');
+  public function index() {
+    $caller=$this->input->post('caller'); 
+    $values=array(); 
 
-    $this->form_validation->set_rules('hear_about_us','\'How did you find out about us?\'', 'trim|callback__value_required[hear_about_us]');
+    if ($caller == "Send") {
+      $form_token = $this->session->userdata('form_token');
 
-/*	if($values['message'] != "Message" or $values['message'] == "")
-	{
-     $this->form_validation->set_rules('message','message','trim|callback__validateMessageText[message~message]');		     //field name~caption
-	
-	}
-*/
-	
-    if($this->form_validation->run() == TRUE)
-    {  
-	 if($values['message'] == "Message") $values['message']="";
-	 
-	 $arrData= array(
-		   'report_type' => 'Contact-Enquiry' ,
-		   'name' => $this->commonfunctions->ReplaceSpecialChars($values['name']),
-		   'email' => $values['email'],
-		   'contact_no' =>$values['phone'],
-		   'question' => $values['hear_about_us'],
-		   'message' => $this->commonfunctions->ReplaceSpecialChars($values['message'])
-	 );
-	 
-     $this->Website_model->SaveConnect($arrData);
+      if (!isset($form_token)) {
+        $this->RedirectPage(); exit;
+      } else if(isset($form_token) && $form_token != 'contact') {
+        $this->RedirectPage(); exit;
+      }
+       
+      if (!preg_match('/'.$_SERVER['HTTP_HOST'].'/',$_SERVER['HTTP_REFERER'])) {
+        $this->RedirectPage(); exit;
+      }	   
 
-     $this->session->unset_userdata('form_token');	 	 
+      $values['name']=$this->input->post('name');
+      $values['email']=$this->input->post('email');
+      $values['phone']=$this->input->post('phone');
+      $values['message']=$this->input->post('message');
+      $values['hear_about_us']=$this->input->post('hear_about_us');
 
-	 $this->SendMessage($values);
-	 $this->RedirectPage('connect-thanks');
-	}
-   } else $this->session->set_userdata('form_token','contact');
-   $this->data['attribute']=$this->Website_model->ContactFormAttribute($values);
+      $this->load->library('form_validation'); 
+      $this->form_validation->set_message('valid_email','Please enter a valid email id');
+      $this->form_validation->set_rules('name','name','trim|callback__value_required[name]');
+      $this->form_validation->set_rules('phone','contact number', 'trim|callback__value_required[phone]|callback__validatePhone[contact number]');
+      $this->form_validation->set_rules('email','email','trim|callback__value_required[email]|valid_email');
 
-   $this->data['meta']=$this->Metatags_model->GetMetaTags('SINGLE_PAGE','4','Connect');
-   $this->data['cta']=$this->Website_model->GetCTAButtons('SINGLE_PAGE',4);
-   // if contact us form submit successfully, then we set the message
+      $this->form_validation->set_rules('hear_about_us','\'How did you find out about us?\'', 'trim|callback__value_required[hear_about_us]');
+    
+      if($this->form_validation->run() == TRUE) {  
+        if($values['message'] == "Message") $values['message']="";
+     
+        $arrData= array(
+            'report_type' => 'Contact-Enquiry' ,
+            'name' => $this->commonfunctions->ReplaceSpecialChars($values['name']),
+            'email' => $values['email'],
+            'contact_no' =>$values['phone'],
+            'question' => $values['hear_about_us'],
+            'message' => $this->commonfunctions->ReplaceSpecialChars($values['message'])
+        );
+     
+        $this->Website_model->SaveConnect($arrData);
+        $this->session->unset_userdata('form_token');	 	 
+        $this->SendConnectMessageToUser($values);
+        $this->RedirectPage('connect-thanks');
+      }
+    } else $this->session->set_userdata('form_token','contact');
 
-   $this->websitejavascript->include_footer_js=array('ContactUsJs');
+    $this->data['attribute']=$this->Website_model->ContactFormAttribute($values);
+    $this->data['meta']=$this->Metatags_model->GetMetaTags('SINGLE_PAGE','4','Connect');
+    $this->data['cta']=$this->Website_model->GetCTAButtons('SINGLE_PAGE',4);
+    $this->websitejavascript->include_footer_js=array('ContactUsJs');
+    $this->data['contents']=$this->Website_model->GetPageContent(5);
 
-   $this->data['contents']=$this->Website_model->GetPageContent(5);
-
-   // Send address as an argument to Map address function to get map attributes.
-
-   $this->load->view('templates/header',$this->data);
-   $this->load->view('connect/connect',$this->data);
-   $this->load->view('templates/footer');
+    $this->load->view('templates/header',$this->data);
+    $this->load->view('connect/connect',$this->data);
+    $this->load->view('templates/footer');
   }
-  public function _check_verification_code($code)
-  {
-   include("captcha/securimage.php");
-   $img = new Securimage();
-   $verification = $img->check($code);
-   if($verification==true)
-   {
-    return true;
-   }
-   else
-   {
+
+  public function _check_verification_code($code) {
+    include("captcha/securimage.php");
+
+    $img = new Securimage();
+    $verification = $img->check($code);
+
+    if ($verification == true) {
+      return true;
+    } 
+
     $this->form_validation->set_message('_check_verification_code', 'Wrong verfication code');
-	return false;
-   }
+    return false;
   }
-  public function SendMessage($values)
-  {
-   if($values['message'] == "Message") $values['message']="";
-   $mailBody="<div style='background:#fff;color:#000; padding:10px'> 
-	<p style='font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal;'>Please follow up on the following enquiry</p> 
-    <div style='clear:both;'></div>
-    <div style='margin:0px; padding:0px;'>
-    	<div style='float:left; width:200px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;'>Name:</div> <div style='float:left; width:440px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;'>".$values['name']."</div>
-		
-      <div style='clear:both;'></div>
-    	<div style='float:left; width:200px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;'>Email:</div> <div style='float:left; width:440px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;'>".$values['email']."</div>
-      
-      <div style='clear:both;'></div>
-	  
-    	<div style='float:left; width:200px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;'>Phone:</div> <div style='float:left; width:440px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;'>".$values['phone']."</div>
-	<div style='clear:both;'></div>
 
-
-
-      
-      
-      <div style='clear:both;'></div>
-    	<div style='float:left; width:200px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;'>How did you find out about us?:</div> <div style='float:left; width:440px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;'>".$values['hear_about_us']."</div>
-	<div style='clear:both;'></div>";
-	
-	if($values['message'] != "")
-	{
-     $mailBody.="<div style='float:left; width:200px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;'>Message:</div> <div style='float:left; width:440px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;'>".$values['message']."</div>";
-	}
-	 
-     $mailBody.="<div style='clear:both;'></div></div></div>";
-   
-	 $reply_to=array();
-	$reply_to['email']=$values['email'];
-	$reply_to['name']=$values['name'];
-	 
-   $this->SendMail($mailBody,$reply_to,1); 
-  }
-  public function _value_required($field_value,$field)
-  {
+  public function _value_required($field_value,$field) {
    switch($field)
    {
     case "name" :

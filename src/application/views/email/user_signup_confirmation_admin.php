@@ -3,7 +3,7 @@
   <div style="padding:10px; background:#fff;">
     <div style="color:#000; font-size:12px; font-family:Arial, Helvetica, sans-serif; line-height:18px; padding:0px">
 
-<p>A new user signed up with following informaiton</p>
+<p>A new user signed up with following information</p>
 
 <div style='clear:both;'></div>
 <div style='margin:0px; padding-top:12px; padding-bottom:12px;background:#fff;color:#000;'>
