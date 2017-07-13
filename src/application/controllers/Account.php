@@ -159,8 +159,7 @@ class Account extends MY_Controller
                     $records['account_type'] = $account['type_name'];
                 }
 
-								// TODO: bring these templates within codebase, not stored in db
-                $this->SendMessageToAdmin($records);
+    						$this->SendSignUpMessageToAdmin($records);
                 $this->SendMessageToUser($records);
                 $this->session->unset_userdata('form_token');
                 $campaign_records = array();
@@ -356,15 +355,20 @@ public function SendMessageToAdmin($values) {
 
        <div style='clear:both;'></div></div>";
 
-/*   This fixes indentantion in ST3
-    $reply_to['email']='';
-    $reply_to['name']='';
-*/
     $reply_to = array();
     $reply_to['email'] = $values['email'];
     $reply_to['name'] = $values['full_name'];
 
     $this->SendMail($mailBody, $reply_to, 3);
+}
+
+public function SendSignUpMessageToAdmin($values) {
+		// TODO: test other account types being sent
+    if($values['account_type'] == "other") {
+        $values['account_type'] == "other : " . $values['other_type'];
+    }
+
+    $this->SendSignUpEmailToAdmin($values);
 }
 
 
