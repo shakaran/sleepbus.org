@@ -7040,10 +7040,42 @@ button.close {
 .youtube:hover{background:url(../images/youtube-hover.png) no-repeat left top;}
 /*End footer*/
 
-.donatehome{text-align:center; margin-top:50px; float:left; }
-.donatehome h2{font-family: 'AvenirNextLTPro-Regular'!important; font-size:24px!important; color:#000000; line-height:28px!important; margin:0; padding:25px 0 0 0; margin:0!important;}
-.donatehome p{font-family: 'AvenirNextLTPro-Regular'; font-size:18px; color:#000000; line-height:28px; padding:25px 0;}
-.donatehomeimg img{max-width:100%;}
+.donatehome {
+  text-align:center;
+  margin-top:50px;
+  float:left;
+  height: 338px;
+}
+
+.donatehome6ways h2 {
+  text-align: center;
+  font-weight: 800;
+  font-family: 'AvenirNextLTPro-Regular'!important;
+  font-size:24px!important;
+  color:#000000; 
+  line-height:28px!important; 
+  margin:0; 
+  padding:25px 0 0 0;
+  margin:0!important;
+}
+
+.donatehome p {
+  font-family: 'AvenirNextLTPro-Regular';
+  font-size:18px;
+  color:#000000;
+  line-height:28px;
+  padding:25px 0;
+  height: 135px;
+}
+
+.donatehomeimg img {
+  height: 140px;
+  margin: 0 auto;
+}
+
+.donatehomeimg {
+  height: 163px;
+}
 
 .cta4home{text-align:center; margin-top:50px; float:none; display:inline-block; width:33%; vertical-align:top;}
  
@@ -8381,3 +8413,16 @@ footer{padding:20px 0;}
     top: -48px;
     visibility: hidden;
 }
+
+.btn-pledge, .btn-partnership {
+  background-color: #8dc63f !important;
+  border-color: #8dc63f !important;
+}
+
+.btn-fundraise, .btn-connect {
+  background-color: #f41e41 !important;
+  border-color: #f41e41 !important;
+}
+
+
+
