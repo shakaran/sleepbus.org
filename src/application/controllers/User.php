@@ -97,7 +97,7 @@
         'subject' => 'A new campaign has been created!',
         'from' => getenv('EMAIL_SEND_FROM'),
         'to' => getenv('ADMIN_EMAIL'),
-        'reply-to' => '<' . $campaign_records['email'] . '> ' . $campaign_records['name']
+        'reply-to' => '<' . $campaign_records['email'] . '> ' . $campaign_records['full_name']
       );
 
       $this->SendEmail($email);
