@@ -31,7 +31,7 @@
    <div class="campaignbutton">
     <a class="btn btn-primary" href="<?php echo base_url();?>donation/<?php echo $campaign_details['url'];?>">Donate</a>  <a class="btn btn-info" target="_blank" href="http://www.facebook.com/sharer.php?u=<?php echo base_url().$campaign_details['url'];?>">    
     <img alt="" src="<?php echo base_url();?>images/fb4.png"></a>
-     <a class="btn btn-warning" target="_blank" href="http://twitter.com/share?url=<?php echo base_url().$campaign_details['url'];?>&amp;text=Simple Share Buttons"><img alt="" src="<?php echo base_url();?>images/twitter4.png"></a>
+     <a class="btn btn-warning" target="_blank" href="http://twitter.com/share?url=<?php echo base_url() . 'campaign/' . $campaign_details['url'];?>&amp;text=Help provide safe-sleeps @sleepbus: <?php echo $campaign_details['campaign_name'];?>"><img alt="" src="<?php echo base_url();?>images/twitter4.png"></a>
     <?php
 	 if($loggedin_user == $campaign_details['username'])
 	 {
