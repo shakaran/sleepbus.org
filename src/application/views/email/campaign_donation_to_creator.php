@@ -35,7 +35,7 @@ A new donation has been made for your campaign. Please follow the information gi
       <div style='float:left;font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000;'>Payment Date:</div> <div style='float:left;font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000'><?php echo $payment_date; ?></div>
 
       <div style='clear:both;'></div>	  
-        <div style='float:left;font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000;'>Name:</div> <div style='float:left;font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000'><?php echo $donor_name; ?></div>";	  
+        <div style='float:left;font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000;'>Name:</div> <div style='float:left;font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000'><?php echo $donor_name; ?></div>
 
       <div style='clear:both;'></div>	  
         <div style='float:left;font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000;'>Email:</div> <div style='float:left;font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px;color:#000'><?php echo $payer_email; ?></div>
