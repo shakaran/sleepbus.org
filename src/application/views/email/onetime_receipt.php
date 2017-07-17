@@ -1,26 +1,12 @@
 <table id="bodyTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;background-color: #FAFAFA;" width="100%" height="100%" cellspacing="0" cellpadding="0" border="0" align="center">
                 <tbody><tr>
                     <td id="bodyCell" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 10px;width: 100%;border-top: 0;" valign="top" align="center">
-                        <!-- BEGIN TEMPLATE // -->
-						<!--[if gte mso 9]>
-						<table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="width:600px;">
-						<tr>
-						<td align="center" valign="top" width="600" style="width:600px;">
-						<![endif]-->
                         <table class="templateContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border: 0;max-width: 600px !important;" width="100%" cellspacing="0" cellpadding="0" border="0">
                             <tbody><tr>
                                 <td id="templatePreheader" style="background:#ffffff none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 9px;padding-bottom: 9px;" valign="top"><table class="mcnTextBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="100%" cellspacing="0" cellpadding="0" border="0">
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="390" style="width:390px;">
-				<![endif]-->
                 <table style="max-width: 390px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
                     <tbody><tr>
                         
@@ -30,13 +16,6 @@
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
-                
-				<!--[if mso]>
-				<td valign="top" width="210" style="width:210px;">
-				<![endif]-->
                 <table style="max-width: 210px;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
                     <tbody><tr>
                         
@@ -46,14 +25,6 @@
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
-                
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
             </td>
         </tr>
     </tbody>
@@ -85,14 +56,6 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
                 <table style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
                     <tbody><tr>
                         
@@ -106,14 +69,6 @@
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
-                
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
             </td>
         </tr>
     </tbody>
@@ -121,20 +76,12 @@
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
                 <table style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
                     <tbody><tr>
                         
                         <td class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;" valign="top">
                         
-                    <a href="http://www.sleepbus.org" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;"><em><img src="https://gallery.mailchimp.com/73da35cb1ac751e93b4d62b7b/images/45d56760-4702-46c2-a629-8d277440230d.jpg" style="border: 0px;width: 160px;height: 41px;float: left;margin: 0px;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="160" height="41" align="none"></em></a><br>
+                    <a href="<?php echo base_url(); ?>" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;"><em><img src="https://gallery.mailchimp.com/73da35cb1ac751e93b4d62b7b/images/45d56760-4702-46c2-a629-8d277440230d.jpg" style="border: 0px;width: 160px;height: 41px;float: left;margin: 0px;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="160" height="41" align="none"></em></a><br>
 <br>
 <br>
 <span style="font-size:12px">Sleep Bus Limited ABN <a href="tel:15 609 317 937" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;">15 609 317 937</a><br>
@@ -142,14 +89,6 @@ sleepbus&reg; is a registered Australian Charity | Deductible Gift Recipient.</s
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
-                
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
             </td>
         </tr>
     </tbody>
@@ -164,10 +103,6 @@ sleepbus&reg; is a registered Australian Charity | Deductible Gift Recipient.</s
                         </td>
                     </tr>
                 </tbody></table>
-<!--            
-                <td class="mcnDividerBlockInner" style="padding: 18px;">
-                <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
--->
             </td>
         </tr>
     </tbody>
@@ -175,14 +110,6 @@ sleepbus&reg; is a registered Australian Charity | Deductible Gift Recipient.</s
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
                 <table style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
                     <tbody><tr>
                         
@@ -190,19 +117,11 @@ sleepbus&reg; is a registered Australian Charity | Deductible Gift Recipient.</s
                         
                             <p style="text-align: center;margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;"><strong>How else can I get involved?</strong></p>
 
-<p style="text-align: center;margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;"><a href="https://www.sleepbus.org/donate" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;"><img data-file-id="1456901" src="https://gallery.mailchimp.com/73da35cb1ac751e93b4d62b7b/images/4283e705-f160-4ba5-8774-64726b1c7ecd.jpg" style="border: 0px;width: 150px;height: 212px;margin: 0px;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="150" height="212"></a>&nbsp;&nbsp;<a href="http://www.sleepbus.org/pledge" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;"><img src="https://gallery.mailchimp.com/73da35cb1ac751e93b4d62b7b/images/31281dbb-6132-4045-9d14-9c5a7bc8c7dd.jpg" style="border: 0px;width: 150px;height: 212px;margin: 0px;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="150" height="212" align="none"></a>&nbsp; &nbsp;&nbsp;<img src="https://gallery.mailchimp.com/73da35cb1ac751e93b4d62b7b/images/1a5022b3-7c14-4b26-a677-1d31b9741e5c.jpg" style="border: 0px;width: 150px;height: 212px;margin: 0px;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="150" height="212" align="none"></p>
+<p style="text-align: center;margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;"><a href="<?php echo base_url(); ?>donate" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;"><img data-file-id="1456901" src="https://gallery.mailchimp.com/73da35cb1ac751e93b4d62b7b/images/4283e705-f160-4ba5-8774-64726b1c7ecd.jpg" style="border: 0px;width: 150px;height: 212px;margin: 0px;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="150" height="212"></a>&nbsp;&nbsp;<a href="<?php echo base_url(); ?>pledge" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;"><img src="https://gallery.mailchimp.com/73da35cb1ac751e93b4d62b7b/images/31281dbb-6132-4045-9d14-9c5a7bc8c7dd.jpg" style="border: 0px;width: 150px;height: 212px;margin: 0px;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="150" height="212" align="none"></a>&nbsp; &nbsp;&nbsp;<img src="https://gallery.mailchimp.com/73da35cb1ac751e93b4d62b7b/images/1a5022b3-7c14-4b26-a677-1d31b9741e5c.jpg" style="border: 0px;width: 150px;height: 212px;margin: 0px;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="150" height="212" align="none"></p>
 
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
-                
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
             </td>
         </tr>
     </tbody>
@@ -222,34 +141,18 @@ sleepbus&reg; is a registered Australian Charity | Deductible Gift Recipient.</s
                         <table style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" cellspacing="0" cellpadding="0" border="0" align="center">
                             <tbody><tr>
                                 <td style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top" align="center">
-                                    <!--[if mso]>
-                                    <table align="center" border="0" cellspacing="0" cellpadding="0">
-                                    <tr>
-                                    <![endif]-->
-                                    
-                                        <!--[if mso]>
-                                        <td align="center" valign="top">
-                                        <![endif]-->
                                         
                                             <table class="mcnFollowStacked" style="display: inline;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" cellspacing="0" cellpadding="0" border="0" align="left">
                                                  
                                                 <tbody><tr>
                                                     <td class="mcnFollowIconContent" style="padding-right: 10px;padding-bottom: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top" align="center">
-                                                        <a href="http://www.sleepbus.org" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-link-96.png" alt="Website" class="mcnFollowBlockIcon" style="width: 48px;max-width: 48px;display: block;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="48"></a>
+                                                        <a href="<?php echo base_url(); ?>" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;"><img src="https://cdn-images.mailchimp.com/icons/social-block-v2/color-link-96.png" alt="Website" class="mcnFollowBlockIcon" style="width: 48px;max-width: 48px;display: block;border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width="48"></a>
                                                     </td>
                                                 </tr>
                                                 
                                                 
                                             </tbody></table>
                                         
-                                        
-                                        <!--[if mso]>
-                                        </td>
-                                        <![endif]-->
-                                    
-                                        <!--[if mso]>
-                                        <td align="center" valign="top">
-                                        <![endif]-->
                                         
                                             <table class="mcnFollowStacked" style="display: inline;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" cellspacing="0" cellpadding="0" border="0" align="left">
                                                  
@@ -263,13 +166,6 @@ sleepbus&reg; is a registered Australian Charity | Deductible Gift Recipient.</s
                                             </tbody></table>
                                         
                                         
-                                        <!--[if mso]>
-                                        </td>
-                                        <![endif]-->
-                                    
-                                        <!--[if mso]>
-                                        <td align="center" valign="top">
-                                        <![endif]-->
                                         
                                             <table class="mcnFollowStacked" style="display: inline;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" cellspacing="0" cellpadding="0" border="0" align="left">
                                                  
@@ -282,15 +178,6 @@ sleepbus&reg; is a registered Australian Charity | Deductible Gift Recipient.</s
                                                 
                                             </tbody></table>
                                         
-                                        
-                                        <!--[if mso]>
-                                        </td>
-                                        <![endif]-->
-                                    
-                                        <!--[if mso]>
-                                        <td align="center" valign="top">
-                                        <![endif]-->
-                                        
                                             <table class="mcnFollowStacked" style="display: inline;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" cellspacing="0" cellpadding="0" border="0" align="left">
                                                  
                                                 <tbody><tr>
@@ -301,16 +188,6 @@ sleepbus&reg; is a registered Australian Charity | Deductible Gift Recipient.</s
                                                 
                                                 
                                             </tbody></table>
-                                        
-                                        
-                                        <!--[if mso]>
-                                        </td>
-                                        <![endif]-->
-                                    
-                                    <!--[if mso]>
-                                    </tr>
-                                    </table>
-                                    <![endif]-->
                                 </td>
                             </tr>
                         </tbody></table>
@@ -335,10 +212,6 @@ sleepbus&reg; is a registered Australian Charity | Deductible Gift Recipient.</s
                         </td>
                     </tr>
                 </tbody></table>
-<!--            
-                <td class="mcnDividerBlockInner" style="padding: 18px;">
-                <hr class="mcnDividerContent" style="border-bottom-color:none; border-left-color:none; border-right-color:none; border-bottom-width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-right:0; margin-bottom:0; margin-left:0;" />
--->
             </td>
         </tr>
     </tbody>
@@ -346,52 +219,21 @@ sleepbus&reg; is a registered Australian Charity | Deductible Gift Recipient.</s
     <tbody class="mcnTextBlockOuter">
         <tr>
             <td class="mcnTextBlockInner" style="padding-top: 9px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" valign="top">
-              	<!--[if mso]>
-				<table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
-				<tr>
-				<![endif]-->
-			    
-				<!--[if mso]>
-				<td valign="top" width="600" style="width:600px;">
-				<![endif]-->
                 <table style="max-width: 100%;min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" class="mcnTextContentContainer" width="100%" cellspacing="0" cellpadding="0" border="0" align="left">
                     <tbody><tr>
                         
                         <td class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #656565;font-family: Helvetica;font-size: 12px;line-height: 150%;text-align: center;" valign="top">
                         
                             <em>Copyright &copy; 2016 Sleep Bus Limited, All rights reserved.</em><br>
-<!--*|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|*<br>
-<br>
-<strong>Our mailing address is:</strong><br>
-*|HTML:LIST_ADDRESS_HTML|* *|END:IF|*<br>
-<br>
-Want to change how you receive these emails?<br>
-You can <a href="*|UPDATE_PROFILE|*" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #656565;font-weight: normal;text-decoration: underline;">update your preferences</a> or <a href="*|UNSUB|*" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #656565;font-weight: normal;text-decoration: underline;">unsubscribe from this list</a><br>
-<br>
-*|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*-->
                         </td>
                     </tr>
                 </tbody></table>
-				<!--[if mso]>
-				</td>
-				<![endif]-->
-                
-				<!--[if mso]>
-				</tr>
-				</table>
-				<![endif]-->
             </td>
         </tr>
     </tbody>
 </table></td>
                             </tr>
                         </tbody></table>
-						<!--[if gte mso 9]>
-						</td>
-						</tr>
-						</table>
-						<![endif]-->
-                        <!-- // END TEMPLATE -->
                     </td>
                 </tr>
             </tbody></table>

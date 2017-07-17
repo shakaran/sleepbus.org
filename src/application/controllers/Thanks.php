@@ -39,10 +39,9 @@ class Thanks extends MY_Controller
   {
    $this->data['meta']=$this->Metatags_model->GetMetaTags('SINGLE_PAGE','27','Thank You');
    $this->data['cta']=$this->Website_model->GetCTAButtons('SINGLE_PAGE',27);
-   $this->data['thanks']=$this->Website_model->GetThankMessages(5);
 
    $this->load->view('templates/header',$this->data);
-   $this->load->view('thanks/thanks',$this->data);
+   $this->load->view('thanks/reset-password-thanks',$this->data);
    $this->load->view('templates/footer');
   }
   
