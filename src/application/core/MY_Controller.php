@@ -420,7 +420,6 @@ class MY_Controller extends CI_Controller {
    {
     $this->data['meta']=$this->Metatags_model->GetMetaTags('SINGLE_PAGE','12','Page Not Found');
     $this->data['cta']=$this->Website_model->GetCTAButtons('SINGLE_PAGE',12);   
-    $this->data['contents']=$this->Website_model->GetPageContent(9); 
 
     $this->load->view('templates/header',$this->data);
     $this->load->view('general-pages/error',$this->data);
