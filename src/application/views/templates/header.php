@@ -208,8 +208,21 @@ else
 
     <?php
 	 if(empty($active_menu) || ($active_menu == "home"))
-	 {
-	  $this->load->view('home/display-banner'); 
+	 {?>
+<div class="dexpothomebanner">
+<div class="homebannerbox">
+<h2>Give safe sleeps</h2>
+
+<h3>You can provide two safe sleeps for just</h3>
+
+
+<?php echo $one_time_donation_form; ?>
+
+<p><a href="/donate">or make a monthly donation</a></p>
+</div>
+</div>
+
+<?php
 	 }
     ?>
 
