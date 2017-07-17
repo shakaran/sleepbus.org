@@ -202,7 +202,6 @@ class Donation extends MY_Controller {
 
     $this->data['meta']=$this->Metatags_model->GetMetaTags('SINGLE_PAGE','33','Donation Successful');
     $this->data['cta']=$this->Website_model->GetCTAButtons('SINGLE_PAGE',33);
-    $this->data['thanks']=$this->Website_model->GetThankMessages(10);
     $this->load->view('templates/header',$this->data);
     $this->load->view('donation/success-message',$this->data);
     $this->load->view('templates/footer');
