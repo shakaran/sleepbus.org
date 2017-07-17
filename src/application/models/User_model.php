@@ -156,7 +156,7 @@
   }
   public function getRaisedAmountOfCampaign($campign_id)
   {
-   $sql="select sum(paid_amount) as raised_amount from ".DONATIONS." where donation_type='campaign' and campaign_id='".$campign_id."'";
+   $sql="select FORMAT(sum(paid_amount),2) as raised_amount from ".DONATIONS." where donation_type='campaign' and campaign_id='".$campign_id."'";
    $res=$this->db->query($sql);
    return $res->row_array();
   }
