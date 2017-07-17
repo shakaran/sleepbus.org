@@ -33,6 +33,12 @@
 
     $campaign_records=array();	  
     $campaign_records=$this->session->userdata('campaign_records'); 
+
+		// quickfix: prevent 'user/save' url creating empty campaign
+		if (empty($campaign_records['campaign_end_date'])){
+			$this->RedirectPage('user/home');
+		}
+
     $campaign_records['user_id']= $user_details['id'];
     $campaign_records['campaign_end_date']=$this->commonfunctions->ChangeDateFormat(str_replace("/","-",$campaign_records['campaign_end_date']));
     $birthday_pledge=array();	  
