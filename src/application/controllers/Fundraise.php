@@ -33,7 +33,8 @@ class Fundraise extends MY_Controller {
       $this->form_validation->set_error_delimiters('<span>','</span>');
       $this->form_validation->set_message('required','{field}');
       $this->form_validation->set_message('numeric','Invalid entry for campaign goal');
-      $this->form_validation->set_rules('campaign_name','Please enter campaign name', 'trim|callback__value_required[campaign_name]');
+      $this->form_validation->set_message('_campaign_name_check','Campaign name cannot contain special characters.');
+      $this->form_validation->set_rules('campaign_name','Please enter campaign name', 'trim|callback__value_required[campaign_name]|callback__campaign_name_check');
       $this->form_validation->set_rules('campaign_goal','Please enter campaign goal', 'trim|required|numeric');
       $this->form_validation->set_rules('month', 'Please enter month', 'required|integer'); 
       $this->form_validation->set_rules('day', 'Please enter date', 'required|integer'); 
@@ -245,4 +246,12 @@ class Fundraise extends MY_Controller {
         break;
     }
   }
+
+	public function _campaign_name_check($str) {
+		if (preg_match('/[#$%^&*()+=\-\[\]\';,.\/{}|":<>?~\\\\]/', $str)) {
+			return FALSE;
+		}
+
+		return TRUE;
+	}
 }
