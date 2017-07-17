@@ -584,7 +584,6 @@ class MY_Controller extends CI_Controller {
 
   public function SendEmail($email) {
     $this->load->library('email');
-
     $this->email->initialize($this->emailConfig);
     $this->email->from($email['from']);
     $this->email->to($email['to']);
@@ -595,6 +594,10 @@ class MY_Controller extends CI_Controller {
 
     if (isset($email['reply-to'])) {
       $this->email->reply_to($email['reply-to']);
+    }
+
+    if (isset($email['bcc'])) {
+      $this->email->bcc($email['bcc'] . ',web@sleepbus.org');
     }
 
     $this->email->send();

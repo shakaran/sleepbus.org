@@ -139,7 +139,7 @@
 	  
       ?>      
       <h2>Copy and share this URL with your friends to raise funds for sleepbus</h2>
-       <div class="shareurl"><?php echo base_url().$attributes['share_url'];?></div>
+       <div class="shareurl"><?php echo base_url() . 'campaign/' . $attributes['share_url'];?></div>
 	   
 	   <?php
 	   
@@ -157,7 +157,7 @@
 	   }
 	  }
 	   
-      echo form_open(base_url().$campaign_details['url'],$attributes['form']);
+      echo form_open(base_url() . 'campaign/' . $campaign_details['url'],$attributes['form']);
       echo form_hidden('caller','Send');
      ?>     
      <h2>Update and comments</h2>
