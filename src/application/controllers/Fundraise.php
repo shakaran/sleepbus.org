@@ -126,7 +126,28 @@ class Fundraise extends MY_Controller {
           $campaign_records['campaign_image']=$values['campaign_image'];
           $this->session->unset_userdata('form_token');
           $this->Fundraise_model->UpdateCampaign($campaign_records,$this->data['campaign_id']);
-          $this->RedirectPage($this->data['campaign_details']['url'],'Your campaign has been updated successfully');
+
+          $donor_emails = $this->User_model->getCampaignDonorsEmails($this->data['campaign_id']);
+
+          if(count($donor_emails) > 0) {
+            $donor_email_ids=implode(",",$donor_emails);
+
+            $campaign_records['campaign_details'] = $this->data['campaign_details'];
+            $campaign_records['donor_email_ids'] = $donor_email_ids;
+            $campaign_records['comments'] = 'Campaign details have been updated';
+
+						$email = array(
+							'message' => $this->load->view('email/campaign_update_to_donors', $campaign_records, TRUE),
+							'subject' => "A new update to the sleepbus campaign you're supporting!",
+							'from' => getenv('EMAIL_SEND_FROM'),
+							'to' => getenv('ADMIN_EMAIL'),
+							'bcc' => $donor_email_ids
+						);
+
+						$this->SendEmail($email);
+          }
+
+          $this->RedirectPage('campaign/' . $this->data['campaign_details']['url'],'Your campaign has been updated successfully');
         }
 
       } else {

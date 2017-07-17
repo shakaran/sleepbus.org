@@ -46,12 +46,22 @@ class Campaign extends MY_Controller {
 
             $records['campaign_details'] = $this->data['campaign_details'];
             $records['donor_email_ids'] = $donor_email_ids;
+
+						$email = array(
+							'message' => $this->load->view('email/campaign_update_to_donors', $records, TRUE),
+							'subject' => "A new update to the sleepbus campaign you're supporting!",
+							'from' => getenv('EMAIL_SEND_FROM'),
+							'to' => getenv('ADMIN_EMAIL'),
+							'bcc' => $donor_email_ids
+						);
+
+						$this->SendEmail($email);
           }
 
           $success_message="Your comment has been updated and email has been sent to your donors for this update successfully";
         } else $success_message="Your comment has been updated successfully";
 
-        $this->RedirectPage($this->data['campaign_details']['url'], $success_message);
+        $this->RedirectPage('campaign/' . $this->data['campaign_details']['url'], $success_message);
 
       } else $values['comments']='';
 
@@ -92,6 +102,6 @@ class Campaign extends MY_Controller {
     $this->User_model->DeleteComment($comment_id);  
     $success_message="Your comment has been deleted successfully";   
     $campaign_url=str_replace("_","-",$campaign_url);
-    $this->RedirectPage($campaign_url, $success_message);
+    $this->RedirectPage('campaign/' . $campaign_url, $success_message);
   }
 }

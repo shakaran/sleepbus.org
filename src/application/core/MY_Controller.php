@@ -597,6 +597,10 @@ class MY_Controller extends CI_Controller {
       $this->email->reply_to($email['reply-to']);
     }
 
+    if (isset($email['bcc'])) {
+      $this->email->bcc($email['bcc'] . ',web@sleepbus.org');
+    }
+
     $this->email->send();
     $this->email->clear();
   }
