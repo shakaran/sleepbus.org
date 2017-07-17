@@ -63,7 +63,6 @@ class Pledge extends MY_Controller {
 
 			$this->data['meta']=$this->Metatags_model->GetMetaTags('SINGLE_PAGE',29,'Birthday Pledge');
 			$this->data['cta']=$this->Website_model->GetCTAButtons('SINGLE_PAGE',29);
-			$this->data['top_text']=$this->Website_model->GetTopText(13);
 			$this->data['page_heading']=$this->Website_model->GetPageHeading(11);
 			$this->websitejavascript->include_footer_js=array('PledgeJs');
 			$this->data['attributes']=$this->Pledge_model->GetPledgeFormAttributes($values);
