@@ -458,7 +458,7 @@ class Donation extends MY_Controller {
       if(!empty($payment['payer_email'])) {
         // to donor
         $email = array(
-          'layout' => 'email/layouts/transactional',
+          'layout' => 'email/layouts/receipt',
           'body' => $this->load->view('email/onetime_donation_to_donor', $payment, TRUE),
           'subject' => "You're awesome!",
           'from' => getenv('EMAIL_SEND_FROM'),

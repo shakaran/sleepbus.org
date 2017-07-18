@@ -63,11 +63,10 @@
                         
                             <h2 class="null" style="display: block;margin: 0;padding: 0;color: #202020;font-family: Helvetica;font-size: 22px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;text-align: left;">&nbsp;</h2>
 
-<p style="font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;font-size: 14px;line-height: 125%;text-align: left;margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #202020;"><?php echo $donor_name; ?></strong>
 
 <!-- body -->
 
-<?php echo $email_body; ?>
+<?php echo $body; ?>
 
 <!-- end body -->
 
