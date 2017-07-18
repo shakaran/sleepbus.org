@@ -48,7 +48,8 @@ class Campaign extends MY_Controller {
             $records['donor_email_ids'] = $donor_email_ids;
 
 						$email = array(
-							'message' => $this->load->view('email/campaign_update_to_donors', $records, TRUE),
+              'layout' => 'email/layouts/transactional',
+							'body' => $this->load->view('email/campaign_update_to_donors', $records, TRUE),
 							'subject' => "A new update to the sleepbus campaign you're supporting!",
 							'from' => getenv('EMAIL_SEND_FROM'),
 							'to' => getenv('ADMIN_EMAIL'),

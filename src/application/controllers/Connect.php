@@ -50,7 +50,18 @@ class Connect extends MY_Controller {
      
         $this->Website_model->SaveConnect($arrData);
         $this->session->unset_userdata('form_token');	 	 
-        $this->SendConnectMessageToUser($values);
+
+        $email = array(
+          'layout' => 'email/layouts/transactional',
+          'body' => $this->load->view('email/user_connect_message', $values, TRUE),
+          'subject' => 'A person has connected to sleepbus!',
+          'from' => getenv('EMAIL_SEND_FROM'),
+          'to' => getenv('ADMIN_EMAIL'),
+          'reply-to' => '<' . $values['email'] . '> ' . $values['name']
+        );
+
+        $this->SendEmail($email);
+
         $this->RedirectPage('connect-thanks');
       }
     } else $this->session->set_userdata('form_token','contact');

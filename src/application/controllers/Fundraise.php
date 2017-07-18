@@ -138,7 +138,8 @@ class Fundraise extends MY_Controller {
             $campaign_records['comments'] = 'Campaign details have been updated';
 
 						$email = array(
-							'message' => $this->load->view('email/campaign_update_to_donors', $campaign_records, TRUE),
+              'layout' => 'email/layouts/transactional',
+							'body' => $this->load->view('email/campaign_update_to_donors', $campaign_records, TRUE),
 							'subject' => "A new update to the sleepbus campaign you're supporting!",
 							'from' => getenv('EMAIL_SEND_FROM'),
 							'to' => getenv('ADMIN_EMAIL'),

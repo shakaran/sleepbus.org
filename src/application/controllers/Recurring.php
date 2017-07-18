@@ -130,7 +130,8 @@ class Recurring extends MY_Controller {
         $this->Recurring_model->InsertDonationDetails($payment);
 
         $email = array(
-          'message' => $this->load->view('email/recurring_donation_to_admin', $payment, TRUE),
+          'layout' => 'email/layouts/transactional',
+          'body' => $this->load->view('email/recurring_donation_to_admin', $payment, TRUE),
           'subject' => 'A new recurring donation has been setup!',
           'from' => getenv('EMAIL_SEND_FROM'),
           'to' => getenv('ADMIN_EMAIL'),
@@ -141,7 +142,8 @@ class Recurring extends MY_Controller {
 
         if (!empty($payment['payer_email'])) {
           $email = array(
-            'message' => $this->load->view('email/recurring_donation_to_donor', $payment, TRUE),
+            'layout' => 'email/layouts/transactional',
+            'body' => $this->load->view('email/recurring_donation_to_donor', $payment, TRUE),
             'subject' => 'Thank you for setting up a recurring donation with sleepbus!',
             'from' => getenv('EMAIL_SEND_FROM'),
             'to' => $payment['email']

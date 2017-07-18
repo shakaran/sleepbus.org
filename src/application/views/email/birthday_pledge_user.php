@@ -1,7 +1,3 @@
-<div style="border:1px #002d42 solid; width:680px;">
-  <div style="background:#002d42; padding:10px;"><img src="<?php echo base_url();?>images/logo.png" border="0"> </div>
-  <div style="padding:10px; background:#fff;">
-    <div style="color:#000; font-size:12px; font-family:Arial, Helvetica, sans-serif; line-height:18px; padding:0px">
 
 <p>You pledged your birthday for safe sleeps! What does that mean, exactly? It means that you&#39;ve decided to celebrate your birthday by raising money to provide safe sleeps for people sleeping rough. Maybe you&#39;ll throw a party and ask for contributions at the door. Or offer to do something outrageous if friends donate. Or simply ask for donations to safe sleeps instead of gifts. We&#39;ll remind you when your birthday is closer, or <a href="<?php echo base_url(); ?>signin">start now</a>.</p>
 
@@ -23,7 +19,3 @@
 	     	
     <div style='clear:both;'></div></div>
 
-</div>
-  </div>
-  <div style="padding:3px; background:#002d42;"></div>
-</div>

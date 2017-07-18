@@ -63,8 +63,13 @@
                         
                             <h2 class="null" style="display: block;margin: 0;padding: 0;color: #202020;font-family: Helvetica;font-size: 22px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;text-align: left;">&nbsp;</h2>
 
-<p style="font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;font-size: 14px;line-height: 125%;text-align: left;margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #202020;">[[[TO]]]</strong> [[[BODY]]]
-      [[[FROM]]]
+<p style="font-family: 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;font-size: 14px;line-height: 125%;text-align: left;margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #202020;"><?php echo $donor_name; ?></strong>
+
+<!-- body -->
+
+<?php echo $email_body; ?>
+
+<!-- end body -->
 
                         </td>
                     </tr>
@@ -154,6 +159,7 @@ sleepbus&reg; is a registered Australian Charity | Deductible Gift Recipient.</s
                                             </tbody></table>
                                         
                                         
+                                        
                                             <table class="mcnFollowStacked" style="display: inline;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" cellspacing="0" cellpadding="0" border="0" align="left">
                                                  
                                                 <tbody><tr>
@@ -188,6 +194,7 @@ sleepbus&reg; is a registered Australian Charity | Deductible Gift Recipient.</s
                                                 
                                                 
                                             </tbody></table>
+                                        
                                 </td>
                             </tr>
                         </tbody></table>
