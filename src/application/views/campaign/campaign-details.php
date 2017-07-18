@@ -190,6 +190,9 @@
 	 }
 		 
 	 ?>   
+<br />
+<br />
+<p><b>Please click "Return to merchant" after your donation to have it allocated to this campaign.</b></p>
 
      </div>
     </div>
