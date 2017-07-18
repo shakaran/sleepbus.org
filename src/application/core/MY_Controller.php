@@ -526,60 +526,6 @@ class MY_Controller extends CI_Controller {
    }
    return trim(strtolower($country));
   }
-  
-
-  public function SendMailToUser($mailBody, $records, $email_setting_id, $other_info='')
-  {
-    // You can make a condition with 'other info'(optional variable). 
-    $email_message = $this->Website_model->GetEmailMessages($email_setting_id);
-    
-    if($email_setting_id == 4) {
-        $emailTemplate = $this->load->view('email/email2', '', TRUE);
-        
-        $email_message['message'] = str_replace("[[USER FULL NAME]]", $records['full_name'], $email_message['message']);
-    } else if($email_setting_id == 20) {
-        //$emailTemplate = file_get_contents(base_url()."email-templates/campaign_receipt.html");
-        $emailTemplate = $this->load->view('email/campaign_receipt', '', TRUE);
-    } else if($email_setting_id == 13) {
-        //$emailTemplate = file_get_contents(base_url()."email-templates/onetime_receipt.html");
-        $emailTemplate = $this->load->view('email/onetime_receipt', '', TRUE);
-    } else{
-        //$emailTemplate = file_get_contents(base_url()."email-templates/email2.html");
-        $emailTemplate = $this->load->view('email/email2', '', TRUE);
-    }
-
-    $mailBody=str_replace("[[BODY]]",$mailBody,$email_message['message']);
-    
-    $mailMsg=str_replace("[[[BASE_URL]]]",base_url(),$emailTemplate);
-    $mailMsg=str_replace("[[[TO]]]",'',$mailMsg);
-    $mailMsg=str_replace("[[[BODY]]]",$mailBody,$mailMsg);
-    $mailMsg=str_replace("[[[FROM]]]",'',$mailMsg);
-    
-    $subject= $email_message['subject'];   
-
-    $this->load->library('email');
-
-    $this->email->initialize($this->emailConfig);
-    
-    if(!empty($email_message['sender_email']) and  !empty($email_message['sender_name'])) {
-        $this->email->from($email_message['sender_email'], $email_message['sender_name']);
-    } else {
-        $this->email->from($this->data['common_settings']['sender_email'], $this->data['common_settings']['sender_name']); // Global set sender
-    }
-    
-    // $this->email->reply_to($reply_to['email'], $reply_to['name']);
-    
-    // $to_seo = "webmaster@zeemo.com.au";
-    
-    $this->email->to($records['email']);
-    
-    $this->email->subject($subject);
-    $this->email->set_mailtype('html');
-    $this->email->message($mailMsg);
-    $this->email->send();
-    $this->email->clear();
-    
-  }
 
   public function SendEmail($email) {
     $this->load->library('email');
@@ -589,7 +535,7 @@ class MY_Controller extends CI_Controller {
     $this->email->bcc('web@sleepbus.org'); 
     $this->email->subject($email['subject']);
     $this->email->set_mailtype('html');
-    $this->email->message($email['message']);
+    $this->email->message($this->load->view($email['layout'], $email, TRUE));
 
     if (isset($email['reply-to'])) {
       $this->email->reply_to($email['reply-to']);
@@ -601,53 +547,6 @@ class MY_Controller extends CI_Controller {
 
     $this->email->send();
     $this->email->clear();
-  }
-
-  public function SendPasswordResetEmail($values) {
-    // TODO: remove all these redundant functions
-    //       put SendEmail calls at action point
-    $email = array(
-      'message' => $this->load->view('email/password_reset', $values, TRUE),
-      'subject' => 'sleepbus: Password oops',
-      'from' => getenv('EMAIL_SEND_FROM'),
-      'to' => $values['email']
-    );
-
-    $this->SendEmail($email);
-  }
-
-  public function SendSignUpEmailToAdmin($values) {
-    $email = array(
-      'message' => $this->load->view('email/user_signup_confirmation_admin', $values, TRUE),
-      'subject' => 'A new user has joined the sleepbus family!',
-      'from' => getenv('EMAIL_SEND_FROM'),
-      'to' => getenv('ADMIN_EMAIL')
-    );
-
-    $this->SendEmail($email);
-  }
-
-  public function SendSignUpMessageToUser($values) {
-    $email = array(
-      'message' => $this->load->view('email/user_signup_confirmation', $values, TRUE),
-      'subject' => 'Thank you for signing up to sleepbus!',
-      'from' => getenv('EMAIL_SEND_FROM'),
-      'to' => $values['email']
-    );
-
-    $this->SendEmail($email);
-  }
-
-  public function SendConnectMessageToUser($values) {
-    $email = array(
-      'message' => $this->load->view('email/user_connect_message', $values, TRUE),
-      'subject' => 'A person has connected to sleepbus!',
-      'from' => getenv('EMAIL_SEND_FROM'),
-      'to' => getenv('ADMIN_EMAIL'),
-      'reply-to' => '<' . $values['email'] . '> ' . $values['name']
-    );
-
-    $this->SendEmail($email);
   }
 
   public function _validateMessageText($message,$field_name)

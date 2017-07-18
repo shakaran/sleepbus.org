@@ -159,8 +159,28 @@ class Account extends MY_Controller
                     $records['account_type'] = $account['type_name'];
                 }
 
-								$this->SendSignUpEmailToAdmin($records);
-    						$this->SendSignUpMessageToUser($records);
+                // to admin
+                $email = array(
+                  'layout' => 'email/layouts/transactional',
+                  'body' => $this->load->view('email/user_signup_confirmation_admin', $records, TRUE),
+                  'subject' => 'A new user has joined the sleepbus family!',
+                  'from' => getenv('EMAIL_SEND_FROM'),
+                  'to' => getenv('ADMIN_EMAIL')
+                );
+
+                $this->SendEmail($email);
+
+                // to user
+                $email = array(
+                  'layout' => 'email/layouts/transactional',
+                  'body' => $this->load->view('email/user_signup_confirmation', $records, TRUE),
+                  'subject' => 'Thank you for signing up to sleepbus!',
+                  'from' => getenv('EMAIL_SEND_FROM'),
+                  'to' => $values['email']
+                );
+
+                $this->SendEmail($email);
+
                 $this->session->unset_userdata('form_token');
                 $campaign_records = array();
                 $campaign_records = $this->session->userdata('campaign_records');
@@ -328,7 +348,16 @@ public function forgot_password() {
 
             $this->Account_model->UpdateForgotPassword($records, $values['email']);
 						$values['reset_link'] = $records['reset_link'];
-						$this->SendPasswordResetEmail($values);
+
+            $email = array(
+              'layout' => 'email/layouts/transactional',
+              'body' => $this->load->view('email/password_reset', $records, TRUE),
+              'subject' => 'sleepbus: Password oops',
+              'from' => getenv('EMAIL_SEND_FROM'),
+              'to' => $values['email']
+            );
+
+            $this->SendEmail($email);
 
             $this->RedirectPage('forgot-password-thanks');
         }

@@ -68,7 +68,8 @@
 
       // to admin
       $email = array(
-        'message' => $this->load->view('email/birthday_pledge_admin', $birthday_pledge, TRUE),
+        'layout' => 'email/layouts/transactional',
+        'body' => $this->load->view('email/birthday_pledge_admin', $birthday_pledge, TRUE),
         'subject' => 'A new person has pledged their birthday!',
         'from' => getenv('EMAIL_SEND_FROM'),
         'to' => getenv('ADMIN_EMAIL'),
@@ -79,7 +80,8 @@
 
       // to user
       $email = array(
-        'message' => $this->load->view('email/birthday_pledge_user', $birthday_pledge, TRUE),
+        'layout' => 'email/layouts/transactional',
+        'body' => $this->load->view('email/birthday_pledge_user', $birthday_pledge, TRUE),
         'subject' => "Your birthday is about to changes lives. Here's how.",
         'from' => getenv('EMAIL_SEND_FROM'),
         'to' => $birthday_pledge['email']
@@ -99,7 +101,8 @@
 
       // to admin
       $email = array(
-        'message' => $this->load->view('email/campaign_message_to_admin', $campaign_records, TRUE),
+        'layout' => 'email/layouts/transactional',
+        'body' => $this->load->view('email/campaign_message_to_admin', $campaign_records, TRUE),
         'subject' => 'A new campaign has been created!',
         'from' => getenv('EMAIL_SEND_FROM'),
         'to' => getenv('ADMIN_EMAIL'),
@@ -110,7 +113,8 @@
 
       // to user
       $email = array(
-        'message' => $this->load->view('email/campaign_message_to_user', $campaign_records, TRUE),
+        'layout' => 'email/layouts/transactional',
+        'body' => $this->load->view('email/campaign_message_to_user', $campaign_records, TRUE),
         'subject' => "You're awesome. Thank you",
         'from' => getenv('EMAIL_SEND_FROM'),
         'to' => $campaign_records['email']

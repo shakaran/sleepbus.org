@@ -81,7 +81,8 @@ class Speaker extends MY_Controller {
 
   public function SendMessage($values) {
     $email = array(
-      'message' => $this->load->view('email/speaker_request_message', $values, TRUE),
+      'layout' => 'email/layouts/transactional',
+      'body' => $this->load->view('email/speaker_request_message', $values, TRUE),
       'subject' => 'New request for a sleepbus speaker!',
       'from' => getenv('EMAIL_SEND_FROM'),
       'to' => getenv('ADMIN_EMAIL'),

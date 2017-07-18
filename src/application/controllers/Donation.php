@@ -165,7 +165,8 @@ class Donation extends MY_Controller {
 
       // to admin
       $email = array(
-        'message' => $this->load->view('email/campaign_donation_to_admin', $payment, TRUE),
+        'layout' => 'email/layouts/transactional',
+        'body' => $this->load->view('email/campaign_donation_to_admin', $payment, TRUE),
         'subject' => 'A new campaign donation has been made!',
         'from' => getenv('EMAIL_SEND_FROM'),
         'to' => getenv('ADMIN_EMAIL'),
@@ -177,7 +178,8 @@ class Donation extends MY_Controller {
       if(!empty($payment['payer_email'])) {
         // to donor
         $email = array(
-          'message' => $this->load->view('email/campaign_donation_to_donor', $payment, TRUE),
+          'layout' => 'email/layouts/receipt',
+          'body' => $this->load->view('email/campaign_donation_to_donor', $payment, TRUE),
           'subject' => "You're awesome!",
           'from' => getenv('EMAIL_SEND_FROM'),
           'to' => $payment['payer_email']
@@ -188,7 +190,8 @@ class Donation extends MY_Controller {
 
       // to campaign creator
       $email = array(
-        'message' => $this->load->view('email/campaign_donation_to_creator', $payment, TRUE),
+        'layout' => 'email/layouts/transactional',
+        'body' => $this->load->view('email/campaign_donation_to_creator', $payment, TRUE),
         'subject' => "A new donation has been made to your campaign!",
         'from' => getenv('EMAIL_SEND_FROM'),
         'to' => $payment['campaign_email']
@@ -442,7 +445,8 @@ class Donation extends MY_Controller {
 
       // to admin
       $email = array(
-        'message' => $this->load->view('email/onetime_donation_to_admin', $payment, TRUE),
+        'layout' => 'email/layouts/transactional',
+        'body' => $this->load->view('email/onetime_donation_to_admin', $payment, TRUE),
         'subject' => 'A onetime donation has been made!',
         'from' => getenv('EMAIL_SEND_FROM'),
         'to' => getenv('ADMIN_EMAIL'),
@@ -454,7 +458,8 @@ class Donation extends MY_Controller {
       if(!empty($payment['payer_email'])) {
         // to donor
         $email = array(
-          'message' => $this->load->view('email/onetime_donation_to_donor', $payment, TRUE),
+          'layout' => 'email/layouts/transactional',
+          'body' => $this->load->view('email/onetime_donation_to_donor', $payment, TRUE),
           'subject' => "You're awesome!",
           'from' => getenv('EMAIL_SEND_FROM'),
           'to' => $payment['payer_email']
