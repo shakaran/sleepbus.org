@@ -1,16 +1,18 @@
-Title: 
+### Title
 
-Platform / OS: 
-Browser: 
+### Platform / OS 
 
-Description: 
+### Browser
 
-Steps to Reproduce:
+### Description
+
+### Steps to Reproduce
 
  - step
  - step
  - step
 
-Expected Behavior: 
+### Expected Behavior 
 
-Additional Info: 
+### Additional Info
+
