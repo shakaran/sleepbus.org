@@ -18,11 +18,14 @@ sleep 5
 mysql -u $SLEEPBUS_DB_USER -h $SLEEPBUS_DB_HOST -p$SLEEPBUS_DB_PASSWORD -e "create database $SLEEPBUS_DB_NAME"
 mysql -u $SLEEPBUS_DB_USER -h $SLEEPBUS_DB_HOST -p$SLEEPBUS_DB_PASSWORD $SLEEPBUS_DB_NAME < /seed_data/sleepbus_sample_data.sql
 
-
 # get container IP address
 containerIP=$(ip route get 1 | awk '{print $NF;exit}')
 
 . /sync_sources.sh
+
+# install PHP libs via Composer
+curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+composer install -d /var/www/html/application
 
 # OPTIONAL: run log apache errors
 #tail -f /var/log/apache2/error.log
