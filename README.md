@@ -2,6 +2,8 @@
 
 # sleepbus.org
 
+[![Join the chat at https://gitter.im/sleepbusorg/sleepbus.org](https://badges.gitter.im/sleepbusorg/sleepbus.org.svg)](https://gitter.im/sleepbusorg/sleepbus.org?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Source code, development tasks and issue tracker for [sleepbus.org](https://www.sleepbus.org) non-profit organisation, helping to provide safe sleeps for those living rough.
 
 # Getting up and running with the project
