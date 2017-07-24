@@ -151,4 +151,8 @@
     $this->load->view('templates/footer');
    }
   }
+
+  public function GetBlogByURL($blog_url) {
+      $this->load->view('blog/' . $blog_url);
+  }
  }
