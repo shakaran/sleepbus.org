@@ -6,6 +6,7 @@ RewriteBase /
 RewriteCond %{HTTP_HOST} !^localhost
 RewriteCond %{HTTP_HOST} !^dev
 RewriteCond %{HTTP_HOST} !^uat
+RewriteCond %{HTTP_HOST} !^ec2
 RewriteCond %{HTTP_HOST} !^www\.
 RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
 
