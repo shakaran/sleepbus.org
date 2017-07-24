@@ -86,9 +86,9 @@
 
   </div>
 
-   <div class="blogsharebox"><a href="<?php echo base_url();?>blog/<?php echo $cat_url;?>" class="btn btn-primary">see more blogs</a> <a href="http://www.facebook.com/sharer.php?u=<?php echo base_url();?>blog/<?php echo $cat_url;?>/<?php echo $blog_url; ?>" target="_blank" class="btn btn-success"><img src="<?php echo base_url();?>images/fb3.png" alt=""> share it!</a> <a href="http://twitter.com/share?url=<?php echo base_url();?>blog/<?php echo $cat_url;?>/<?php echo $blog_url; ?>&text=" target="_blank" class="btn btn-info"><img src="<?php echo base_url();?>images/twitter2.png" alt="">share it!</a></div>
+   <div class="blogsharebox"><a href="<?php echo base_url();?>blog/<?php echo $cat_url;?>" class="btn btn-primary">see more blogs</a> <a href="http://www.facebook.com/sharer.php?u=<?php echo base_url();?>blog/<?php echo $cat_url;?>/<?php echo $blog_url; ?>" target="_blank" class="btn btn-primary btn-facebook"><img src="<?php echo base_url();?>images/fb3.png" alt=""> share it!</a> <a href="http://twitter.com/share?url=<?php echo base_url();?>blog/<?php echo $cat_url;?>/<?php echo $blog_url; ?>&text=" target="_blank" class="btn btn-info"><img src="<?php echo base_url();?>images/twitter2.png" alt="">share it!</a></div>
 
-   <div class="backtoblog">< <a href="<?php echo base_url();?>blog">Back to blogs</a></div>
+   <div class="backtoblog">&#60; <a href="<?php echo base_url();?>blog">Back to blogs</a></div>
 
   </div>
 
