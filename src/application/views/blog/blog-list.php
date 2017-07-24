@@ -6,31 +6,6 @@
         <?php
          echo $top_text['content'];
 		?>
-        <div class="fundingtoptext">
-        
-		<?php
-           if(count($blog_categories) > 0)
-		   {
-		    ?>
-            <div class="fundingtoptextselect">
-            <div class="birthdayinputname">
-            <select id="categories" name="categories" class="form-control" onchange="window.location='<?php echo base_url();?>blog/'+this.value">
-             <option value=''>Select Category</option>
-             <?php
-             foreach($blog_categories as $category)
-			 {
-			  ?>
-              <option value="<?php echo $category['url'];?>" <?php if(isset($cat_url) and $cat_url == $category['url']){?> selected="selected" <?php }?>><?php echo $category['category_name'];?></option>
-			  <?php
-			 }
-			 ?>
-            </select>
-            </div>
-            </div>
-            <?php
-		   }       
-        ?>        
-        </div>
        </div>
        </div>
     </div>
