@@ -3,38 +3,42 @@
   <div class="container">
     <div class="row">
        <div class="funding">
-        <?php
-         echo $top_text['content'];
-		?>
+
+        <h1>Blog</h1>
+
+	      <div class="fundingtoptext">
+
+          <h2>Stories and updates from our team, partners, and supporters</h2>
+	      </div>
+
+
+
        </div>
        </div>
     </div>
   </div>
   
-<?php
-if(count($all_blogs) > 0)
-{
- ?>  
  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 blogmainbox">
   <div class="row">
   
-  <?php
-   foreach($all_blogs as $blog)
-   {
-    ?>
 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 blogbox">
-      <a href="<?php echo base_url().'blog/'.$blog['cat_url'].'/'.$blog['url'];?>"> 
-       <?php
-        echo $blog['intro_text'];
-	   ?>
+      <a href="<?php echo base_url().'blog/category/blog2';?>"> 
+
+        <div class="blogboxhover">
+        <p><span>an update</span></p>
+
+        <h2>Dear sleepbus family.</h2>
+        </div>
+
+        <figure><img alt="" src="/images/img22.jpg" /></figure>
+
+        <div class="redmore">
+        <p>&nbsp;</p>
+        </div>
+
+
        </a>
     </div>
-	<?php
-   }
-   ?>
   </div>  
  </div>
- <?php
-}
-?> 
 
