@@ -68,7 +68,7 @@
 				</div>
 
 				<p>Together we can end people sleeping rough.</p>
-				<a class="btn btn-primary btn-partnership" href="/corporate-support">PARTNERSHIP</a>
+				<a class="btn btn-primary btn-partnership" href="/corporate-supporters">PARTNERSHIP</a>
 			</div>
 
 			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 donatehome">
