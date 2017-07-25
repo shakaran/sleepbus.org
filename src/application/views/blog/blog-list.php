@@ -25,9 +25,9 @@
         <a href="<?php echo base_url().'blog/july_2017_news';?>"> 
 
           <div class="blogboxhover">
-            <p><span>latest news</span></p>
+            <p><span>What's Been Happening</span></p>
 
-            <h2>July 2017 Newsletter</h2>
+            <h2>July 2017</h2>
           </div>
 
           <figure><img alt="" src="/images/img22.jpg" /></figure>

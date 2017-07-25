@@ -22,7 +22,7 @@
 		<main id="main">
 			<aside class="aside">
 				<div class="logo">
-					<a href="#">
+					<a href="/">
 						<img src="/images/julynews/logo.png" alt="sleepbus.org">
 					</a>
 				</div>
@@ -32,7 +32,7 @@
 						<img src="/images/julynews/ico-donate.png" alt="image description">
 					</div>
 					<div class="btn-hold">
-						<a href="#" class="button yellow">Donate</a>
+						<a href="/donate" class="button yellow">Donate</a>
 						<span class="info">For $27.50 you can give a good nights sleep.</span>
 					</div>
 				</div>
@@ -41,7 +41,7 @@
 						<img src="/images/julynews/ico-pledge.png" alt="image description">
 					</div>
 					<div class="btn-hold">
-						<a href="#" class="button">Pledge</a>
+						<a href="/pledge" class="button">Pledge</a>
 						<span class="info">Pledge your next birthday for safe sleeps.</span>
 					</div>
 				</div>
@@ -50,7 +50,7 @@
 						<img src="/images/julynews/ico-fundraise.png" alt="image description">
 					</div>
 					<div class="btn-hold">
-						<a href="#" class="button red">Fundraise <span class="bar"></span></a>
+						<a href="/fundraise" class="button red">Fundraise <span class="bar"></span></a>
 						<span class="info">Do something crazy or creative to raise money.</span>
 					</div>
 				</div>
@@ -59,7 +59,7 @@
 						<img src="/images/julynews/ico-volunter.png" alt="image description">
 					</div>
 					<div class="btn-hold">
-						<a href="#" class="button yellow">Volunteer</a>
+						<a href="/volunteer" class="button yellow">Volunteer</a>
 						<span class="info">Jump onboard and lend a hand.</span>
 					</div>
 				</div>
@@ -68,7 +68,7 @@
 						<img src="/images/julynews/ico-partner.png" alt="image description">
 					</div>
 					<div class="btn-hold">
-						<a href="#" class="button">Partnership</a>
+						<a href="/corporate-supporters" class="button">Partnership</a>
 						<span class="info">Together we can end people sleeping rough.</span>
 					</div>
 				</div>
@@ -77,7 +77,7 @@
 						<img src="/images/julynews/ico-connect.png" alt="image description">
 					</div>
 					<div class="btn-hold">
-						<a href="#" class="button red">Connect</a>
+						<a href="/connect" class="button red">Connect</a>
 						<span class="info">Introduce us to people, companies, councils and more.</span>
 					</div>
 				</div>
@@ -88,7 +88,9 @@
 					<span class="date">July 2017</span>
 				</div>
 				<div class="main-img">
+        <a href="https://www.telstrabusinessawards.com/mos">
 					<img src="/images/julynews/main-img.jpg" width="846" alt="image description">
+        </a>
 				</div>
 				<h3>SLEEPBUS | HARD WORK GETS NOTICED</h3>
 				<p>I am thrilled to announce that sleepbus<sup>&reg;</sup> is a finalist for the 2017 Telstra Business Awards. The Awards dinner will be held on Friday 28th July, at which time winners will be announced; finters crossed</p>
@@ -109,14 +111,14 @@
 					<p>Lincoln didn’t just have a meeting with the Principal and Vice Principal of his school, he had a successful meeting, gaining their full support. Lincoln has started a Fundraising Campaign on the sleepbus website where he hopes to raise $1,000 for safe sleeps. He’s been washing cars in his neighbourhood during school holidays and is seeking sponsors for a 5km run he is planning. At the time of writing, he had already raised more than $400.</p>
 					<p>If you’d like to support this 10 year old legend by donating to his campaign, click the link below, or if you’d like to start your own campaign, that would be awesome too.</p>
 					<div class="button-holder">
-						<a href="#" class="button">Donate to <br> Lincoln's campaign</a>
-						<a href="#" class="button red">Start your own <br> campaign</a>
+						<a href="/campaign/lincolnbarclayscampaign" class="button">Donate to <br> Lincoln's campaign</a>
+						<a href="/fundraise" class="button red">Start your own <br> campaign</a>
 					</div>
 				</div>
 				<div class="volunteer-holder">
 					<h3>IT’S ALMOST TIME: VOLUNTEERS WANTED</h3>
 					<div class="info-box">
-						<a href="#">
+						<a href="/volunteer">
 							<div class="img-hold">
 								<img src="/images/julynews/img-help.png" alt="image description">
 							</div>
@@ -133,19 +135,19 @@
 			<span class="social-head">Stay connected</span>
 			<ul class="social-networks">
 				<li>
-					<a href="#">
+					<a href="https://www.facebook.com/sleepbusaustralia">
 						<img src="/images/julynews/ico-facebook.png" alt="facebook">
 						<span class="text">sleepbusaustralia</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="https://www.instagram.com/sleepbus/">
 						<img src="/images/julynews/ico-instagram.png" alt="instagram">
 						<span class="text">sleepbus</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="https://twitter.com/sleepbus">
 						<img src="/images/julynews/ico-twitter.png" alt="twitter">
 						<span class="text">sleepbus</span>
 					</a>
