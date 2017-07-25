@@ -30,7 +30,7 @@
             <h2>July 2017</h2>
           </div>
 
-          <figure><img alt="" src="/images/img22.jpg" /></figure>
+          <figure><img alt="" src="/images/Newsletter_Cover.jpg" /></figure>
 
           <div class="redmore">
             <p>&nbsp;</p>
