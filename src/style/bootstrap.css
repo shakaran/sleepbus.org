@@ -7558,8 +7558,8 @@ button.close {
 .blogsharebox .btn{font-size:16px; font-family: 'AvenirNextLTPro-Demi'; padding:15px 12px; text-transform:uppercase; width:225px; margin-right:10px; position:relative; margin-bottom:15px;}
 .blogsharebox .btn img{position:absolute; left:20px; top:10px;}
 
-.blogsharebox .btn-success{background-color:#6272a2;  border-color:#6272a2;}
-.blogsharebox .btn-success:hover{background-color:#7f94d2; border-color:#7f94d2;}
+.blogsharebox .btn-facebook{background-color:#6272a2;  border-color:#6272a2;}
+.blogsharebox .btn-facebook:hover{background-color:#7f94d2; border-color:#7f94d2;}
 
 .blogsharebox .btn-info{background-color:#81c1d4;  border-color:#81c1d4;}
 .blogsharebox .btn-info:hover{background-color:#8cd3e7; border-color:#8cd3e7;}

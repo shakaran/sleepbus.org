@@ -144,13 +144,15 @@
    {
     $this->data['page_heading']=$this->Website_model->GetPageHeading(53);
 	$this->data['meta']=$this->Metatags_model->GetMetaTags('BLOGS',$this->data['blog_details']['id'],$this->data['blog_details']['blog_title']);
-	$this->data['cta']=$this->Website_model->GetCTAButtons('BLOGS',$this->data['blog_details']['id']);
-	
     $this->data['right_blogs']=$this->Blog_model->GetCategoryBlog($this->data['blog_details']['cat_id'],"limit 0,5");
 
     $this->load->view('templates/header',$this->data);
     $this->load->view('blog/blog-details',$this->data);
     $this->load->view('templates/footer');
    }
+  }
+
+  public function GetBlogByURL($blog_url) {
+      $this->load->view('blog/' . $blog_url);
   }
  }

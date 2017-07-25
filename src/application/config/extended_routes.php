@@ -96,7 +96,8 @@
      }
      $route['blog/(:any)/page/(:num)']="blog/BlogCategory/$1/$2";
      $route['blog/page/(:num)']="blog/blog_list/$1";
-*/   $route['blog/(:any)/(:any)']="blog/BlogDetails/$1/$2";
+*/   $route['blog/july_2017_news']="blog/GetBlogByURL/july_2017_news";
+     $route['blog/(:any)/(:any)']="blog/BlogDetails/$1/$2";
      $route['blog/(:any)']="blog/BlogCategory/$1";
     }
     else

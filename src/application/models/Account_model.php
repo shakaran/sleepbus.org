@@ -356,7 +356,7 @@
 
     $attribute['reset_password'] = array('name'=>'reset_password', 'id'=> 'reset_password', 'value'=>$values['reset_password'],'placeholder'=>'New Password',"class"=>'form-control');
 
-    $attribute['retype_password'] = array('name'=>'retype_password', 'id'=> 'retype_password', 'value'=>$values['retype_password'],'placeholder'=>'Reype Password',"class"=>'form-control');
+    $attribute['retype_password'] = array('name'=>'retype_password', 'id'=> 'retype_password', 'value'=>$values['retype_password'],'placeholder'=>'Retype Password',"class"=>'form-control');
 
     $attribute['submit'] = array('name' => 'submit_value','id' => 'submit_value','value' => 'Reset','class'=>'btn btn-primary');
 

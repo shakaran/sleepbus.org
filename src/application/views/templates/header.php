@@ -84,7 +84,7 @@
 <!-- Volunteers needed message -->
 <!-- Note: you need to have no whitespace between .headerVolunteersNeeded and .headerVolunteersNeeded__container
      to preserve the vertical centering, hence the weird tag syntax -->
-<div class="headerVolunteersNeeded" style="display:none;"
+<div class="headerVolunteersNeeded" 
   ><div class="headerVolunteersNeeded__simonIcon"></div
   ><div class="headerVolunteersNeeded__sleepBusIcon"></div
   ><div class="headerVolunteersNeeded__container">
