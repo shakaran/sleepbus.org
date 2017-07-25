@@ -187,7 +187,7 @@
                   </div>
                   <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-7"></button></div>
                   <div class="faq-item-expand collapse" id="expand-donate-7">
-Please speak with your local council about inviting sleepbus into your community.  What we need from a supportive council is... a parking location fitting the appropriate safety requirements and a permit to park sleepbus there 7 days per week from 8pm to 8am. That's it. Any council seriously interested in assisting those sleeping rough in their area with pathways out of homelessness, please contact us. We'll bring sleepbus out to you to take you through the process and how it fits in with DHHS programs and others.
+Please speak with your local council about inviting sleepbus into your community.  What we need from a supportive council is a parking location fitting the appropriate safety requirements and a permit to park sleepbus there 7 days per week from 8pm to 8am. That's it. Any council seriously interested in assisting those sleeping rough in their area with pathways out of homelessness, please contact us. We'll bring sleepbus out to you to take you through the process and how it fits in with DHHS programs and others.
                   </div>
               </div>
 
