@@ -379,11 +379,12 @@ class Donation extends MY_Controller {
 
     $this->data['attribute']=$this->Donation_model->GetDonateFormForOneTimeAttributes($values,$this->data['common_settings']['unit_fund'],365);
 
+    $this->data['attribute']['amount']['value'] = '10,037.50';
+    $this->data['attribute']['amount']['placeholder'] = '10,037.50';
+
     $this->websitejavascript->include_footer_js=array('DonationJs');
     $this->data['meta']=$this->Metatags_model->GetMetaTags('SINGLE_PAGE',39,'Provide one year of safe sleeps');
     $this->data['cta']=$this->Website_model->GetCTAButtons('SINGLE_PAGE',39);
-    $this->data['top_text']=$this->Website_model->GetTopText(15);
-    $this->data['page_text']=$this->Website_model->GetTopText(16);
     $this->data['one_time_donation_form']=$this->load->view('donation/one-year-safe-sleep-form',$this->data,true);
     $this->load->view('templates/header',$this->data);
     $this->load->view('donation/one-year-safe-sleep',$this->data);
