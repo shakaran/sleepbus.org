@@ -58,11 +58,11 @@
 
 		   <div class="blogrighttext">
 
-            <div class="blogdate2">some date</div>
+            <div class="blogdate2">25 July 2017</div>
 
-            <p>some title</p>
+            <p>July 2017 Newsletter</p>
 
-<p><a href="<?php echo base_url()."blog/";?>">Read more </a></p>
+<p><a href="<?php echo base_url()."blog/july_2017_news";?>">Read more </a></p>
 
            </div>
 
