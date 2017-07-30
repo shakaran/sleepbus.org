@@ -8,6 +8,11 @@ cd /var/www/html
 # ignore file ownership as we modify this post sync; ignore git folder
 rsync -a --no-owner --exclude '.git/' --exclude '*.swp' /app/ /var/www/html
 
+
+composer update -d /var/www/html/application
+
 # www-data to own plugin src files 
 chown -R www-data:www-data /var/www/html
+
+echo 'source sync complete'
 

@@ -21,11 +21,14 @@ mysql -u $SLEEPBUS_DB_USER -h $SLEEPBUS_DB_HOST -p$SLEEPBUS_DB_PASSWORD $SLEEPBU
 # get container IP address
 containerIP=$(ip route get 1 | awk '{print $NF;exit}')
 
-. /sync_sources.sh
 
 # install PHP libs via Composer
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-composer update -d /var/www/html/application
+
+. /sync_sources.sh
+
+# rm composer.lock if exists
+rm /var/www/html/application/composer.lock || true
 composer install -d /var/www/html/application
 
 # OPTIONAL: run log apache errors
