@@ -6,6 +6,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <h4>A PHP Error was encountered</h4>
 
+<?php
+// log error in Rollbar
+// https://rollbar.com/docs/api/items_post/
+use \Rollbar\Rollbar;
+use \Rollbar\Payload\Level;
+
+Rollbar::init(
+    array(
+        'access_token' => 'f573b33c0c1f4e0ea4a6c64599068cbc',
+        'environment' => ENVIRONMENT
+    )
+);
+
+
+
+$payload = array(
+  "framework" => "CodeIgniter",
+  "body" => array (
+    "message" => $message
+  )
+);
+
+
+Rollbar::log(
+    Level::info(),
+    json_encode($payload)
+);
+
+?>
+
+
 <p>Severity: <?php echo $severity; ?></p>
 <p>Message:  <?php echo $message; ?></p>
 <p>Filename: <?php echo $filepath; ?></p>
