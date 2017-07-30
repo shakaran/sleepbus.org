@@ -1,6 +1,7 @@
 {
     "require": {
         "vlucas/phpdotenv": "^2.4",
-        "rollbar/rollbar": "~1.2"
+        "rollbar/rollbar": "~1.2",
+        "guzzlehttp/guzzle": "~6.3"
     }
 }

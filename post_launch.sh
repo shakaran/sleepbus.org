@@ -25,6 +25,7 @@ containerIP=$(ip route get 1 | awk '{print $NF;exit}')
 
 # install PHP libs via Composer
 curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+composer update -d /var/www/html/application
 composer install -d /var/www/html/application
 
 # OPTIONAL: run log apache errors
