@@ -8,10 +8,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <?php
 // log error in Rollbar
-// https://rollbar.com/docs/api/items_post/
 use \Rollbar\Rollbar;
 use \Rollbar\Payload\Level;
 
+/* 
+    Rollbar lib should raise Exceptions out of box,
+    error reporting not plugging into CI, so using Guzzle
+*/
 Rollbar::init(
     array(
         'access_token' => 'f573b33c0c1f4e0ea4a6c64599068cbc',
@@ -19,20 +22,28 @@ Rollbar::init(
     )
 );
 
-
-
 $payload = array(
-  "framework" => "CodeIgniter",
-  "body" => array (
-    "message" => $message
+  'access_token' => 'f573b33c0c1f4e0ea4a6c64599068cbc',
+  'data' => array(
+    'environment' => ENVIRONMENT,
+    'framework' => 'CodeIgniter',
+    'body' => array(
+      'message' => array(
+        'body' => 'coming via guzzle'
+      )
+    )
   )
 );
 
+echo print_r(json_encode($payload));die();
 
-Rollbar::log(
-    Level::info(),
-    json_encode($payload)
-);
+$client = new GuzzleHttp\Client();
+$res = $client->request('POST', 'https://api.rollbar.com/api/1/item', [
+    'payload' => json_encode($payload)
+]);
+
+echo $res->getStatusCode();
+echo $res->getBody();
 
 ?>
 
