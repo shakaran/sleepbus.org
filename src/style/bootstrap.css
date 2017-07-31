@@ -8430,3 +8430,10 @@ footer{padding:20px 0;}
 
 
 
+/*custom css for [Signup] Overlapping text in password text field #72*/
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
