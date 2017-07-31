@@ -8437,3 +8437,15 @@ input::-ms-reveal {
   display: none;
 }
 
+/*custom css for [FAQ] Improper layout by expanding some description #64*/
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-row [class^="col-"],
+.flex-row [class*=" col-"] {
+  float: none;
+}
+

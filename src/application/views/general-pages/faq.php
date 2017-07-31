@@ -55,44 +55,46 @@
               <a class="anchor" id="faq-service" ></a>
               <div class="faq-title"><h2>SERVICE</h2></div>
               <div class="faq-container">
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="flex-row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                      <div class="faq-item">
+                          <div class="faq-icon">
+                              <img src="/images/faq_service.png">
+                          </div>
+                          <strong>How often does sleepbus operate?</strong>
+                      </div>
+                      <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-service-1"></button></div>
+                      <div class="faq-item-expand collapse" id="expand-service-1">
+                          sleepbus is run by Sleep Bus Ltd, 365 days per year; 8PM to 8AM.  The operational hours have be chosen so that it fits in with community expectation and concern. sleepbus rolls in at 8PM each night, long after people have left work and then we leave by 8AM, before people return the next morning.
+                      </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="faq-item">
                         <div class="faq-icon">
                             <img src="/images/faq_service.png">
                         </div>
-                        <strong>How often does sleepbus operate?</strong>
+                        <strong>What is the sleepbus nightly schedule?</strong>
                     </div>
-                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-service-1"></button></div>
-                    <div class="faq-item-expand collapse" id="expand-service-1">
-                        sleepbus is run by Sleep Bus Ltd, 365 days per year; 8PM to 8AM.  The operational hours have be chosen so that it fits in with community expectation and concern. sleepbus rolls in at 8PM each night, long after people have left work and then we leave by 8AM, before people return the next morning.
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-service-2"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-service-2">
+                        Here's how a typical sleepbus day looks:
+                        <ul>
+                            <li><span>7:00pm</span> - sleepbus depart depot to approved locations for service</li>
+                            <li><span>8.00pm</span> - sleepbus arrives at the approved location</li>
+                            <li><span>8.30pm</span> - Onboarding of guests commences</li>
+                            <li><span>10.00pm</span> - Onboarding complete and the Caretaker conducts last checks</li>
+                            <li><span>6.30am</span> - Wake up call for all guests</li>
+                            <li><span>6:45am</span> - Offboarding of guests commences</li>
+                            <li><span>7:45am</span> - Offboarding complete</li>
+                            <li><span>8:00am</span> - sleepbus departs approved location</li>
+                            <li><span>9:00am</span> - sleepbus reset process begins back at depot (cleaning, repairs, maintenance, checks etc)</li>
+                            <li><span>11:00am</span> - Any sleepbus booked for site visits depart (Corporate engagement, School/University visits etc)</li>
+                            <li><span>5:00pm</span> - All sleepbus are back in depot for spot checks</li>
+                        </ul>
+                
                     </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_service.png">
-                      </div>
-                      <strong>What is the sleepbus nightly schedule?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-service-2"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-service-2">
-                      Here's how a typical sleepbus day looks:
-                      <ul>
-                          <li><span>7:00pm</span> - sleepbus depart depot to approved locations for service</li>
-                          <li><span>8.00pm</span> - sleepbus arrives at the approved location</li>
-                          <li><span>8.30pm</span> - Onboarding of guests commences</li>
-                          <li><span>10.00pm</span> - Onboarding complete and the Caretaker conducts last checks</li>
-                          <li><span>6.30am</span> - Wake up call for all guests</li>
-                          <li><span>6:45am</span> - Offboarding of guests commences</li>
-                          <li><span>7:45am</span> - Offboarding complete</li>
-                          <li><span>8:00am</span> - sleepbus departs approved location</li>
-                          <li><span>9:00am</span> - sleepbus reset process begins back at depot (cleaning, repairs, maintenance, checks etc)</li>
-                          <li><span>11:00am</span> - Any sleepbus booked for site visits depart (Corporate engagement, School/University visits etc)</li>
-                          <li><span>5:00pm</span> - All sleepbus are back in depot for spot checks</li>
-                      </ul>
-
-                  </div>
+                </div>
               </div>
             </div>
          </div>
@@ -100,108 +102,110 @@
           <a class="anchor" id="faq-donate" ></a>
           <div class="faq-title"><h2>DONATE</h2></div>
           <div class="faq-container">
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_donate.png">
-                      </div>
-                      <strong>How do I donate?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-1"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-donate-1">
-                      Simply donate through <a href="/donate">our website</a>
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_donate.png">
-                      </div>
-                      <strong>How can I undertake a fundraising event?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-2"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-donate-2">
-                      You can <a href="/fundraise">start a fundraising campaign</a> of your own for safe sleeps. You can do anything from a Pyjama Day, Sleep In etc. Just have fun!
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_donate.png">
-                      </div>
-                      <strong>Can my organisation/business get involved?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-3"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-donate-3">
-                      We partner with corporations for matching programs, public campaigns, employee engagement and other fundraising ideas tailored to the business' market and brand. It is this support that makes it possible for sleepbus to do the work that needs to be done and allows us to always use 100% of public donations to fund sleepbus projects. <a href="/corporate-supporters">see how</a>
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_donate.png">
-                      </div>
-                      <strong>How can my school get involved?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-4"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-donate-4">
-                      You can <a href="/fundraise">start a fundraising campaign</a> of your own for safe sleeps. You can do anything from a Pyjama Day, Sleep In etc. Just have fun!
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_donate.png">
-                      </div>
-                      <strong>Are my donations tax-deductible?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-5"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-donate-5">
-                      Yes, any donations you make to sleepbus are tax deductible.
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_donate.png">
-                      </div>
-                      <strong>Will I receive a receipt for tax-deductible donations?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-6"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-donate-6">
-                      Yes, a receipt will automatically be emailed to you upon donation.
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_donate.png">
-                      </div>
-                      <strong>How do I organise a sleepbus in my local area?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-7"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-donate-7">
-Please speak with your local council about inviting sleepbus into your community.  What we need from a supportive council is a parking location fitting the appropriate safety requirements and a permit to park sleepbus there 7 days per week from 8pm to 8am. That's it. Any council seriously interested in assisting those sleeping rough in their area with pathways out of homelessness, please contact us. We'll bring sleepbus out to you to take you through the process and how it fits in with DHHS programs and others.
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_donate.png">
-                      </div>
-                      <strong>Do you accept donations of clothes and furniture?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-8"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-donate-8">
-                      No, sleepbus are in the business of safe sleeps and do not accept donations of items such as clothes and homewares.
-                  </div>
+              <div class="flex-row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_donate.png">
+                        </div>
+                        <strong>How do I donate?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-1"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-donate-1">
+                        Simply donate through <a href="/donate">our website</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_donate.png">
+                        </div>
+                        <strong>How can I undertake a fundraising event?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-2"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-donate-2">
+                        You can <a href="/fundraise">start a fundraising campaign</a> of your own for safe sleeps. You can do anything from a Pyjama Day, Sleep In etc. Just have fun!
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_donate.png">
+                        </div>
+                        <strong>Can my organisation/business get involved?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-3"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-donate-3">
+                        We partner with corporations for matching programs, public campaigns, employee engagement and other fundraising ideas tailored to the business' market and brand. It is this support that makes it possible for sleepbus to do the work that needs to be done and allows us to always use 100% of public donations to fund sleepbus projects. <a href="/corporate-supporters">see how</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_donate.png">
+                        </div>
+                        <strong>How can my school get involved?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-4"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-donate-4">
+                        You can <a href="/fundraise">start a fundraising campaign</a> of your own for safe sleeps. You can do anything from a Pyjama Day, Sleep In etc. Just have fun!
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_donate.png">
+                        </div>
+                        <strong>Are my donations tax-deductible?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-5"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-donate-5">
+                        Yes, any donations you make to sleepbus are tax deductible.
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_donate.png">
+                        </div>
+                        <strong>Will I receive a receipt for tax-deductible donations?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-6"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-donate-6">
+                        Yes, a receipt will automatically be emailed to you upon donation.
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_donate.png">
+                        </div>
+                        <strong>How do I organise a sleepbus in my local area?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-7"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-donate-7">
+                Please speak with your local council about inviting sleepbus into your community.  What we need from a supportive council is a parking location fitting the appropriate safety requirements and a permit to park sleepbus there 7 days per week from 8pm to 8am. That's it. Any council seriously interested in assisting those sleeping rough in their area with pathways out of homelessness, please contact us. We'll bring sleepbus out to you to take you through the process and how it fits in with DHHS programs and others.
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_donate.png">
+                        </div>
+                        <strong>Do you accept donations of clothes and furniture?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-donate-8"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-donate-8">
+                        No, sleepbus are in the business of safe sleeps and do not accept donations of items such as clothes and homewares.
+                    </div>
+                </div>
               </div>
           </div>
       </div>
