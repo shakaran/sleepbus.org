@@ -198,3 +198,37 @@
     </div>
   </div>
 </div>
+
+<?php if ($campaign_details['image_file'] == 'birthday_2_FINAL-01.jpg'): ?>
+<!-- hacky quick fix for birthday campaign title -->
+<style>
+@media all and (min-width:0px) and (max-width: 750px) {
+  /* put your css styles in here */
+}
+
+@media all and (min-width:751px) and (max-width: 4000px) {
+  .campaignbutton {
+      margin: 305px 0 0 0;
+  }
+
+  .campaignimgboxleft {
+      margin: 305px 0 0 0;
+  }
+
+  .campaignboxin {
+      top: 30px;
+      height: 100%;
+  }
+}
+
+.campaignboxin h1 {
+  color: #2AC5F4;
+}
+
+.campaignboxin p {
+  color: #2AC5F4;
+}
+
+</style>  
+
+<?php endif; ?>
