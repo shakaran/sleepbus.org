@@ -213,39 +213,41 @@
           <a class="anchor" id="faq-safety"></a>
           <div class="faq-title"><h2>SAFETY</h2></div>
           <div class="faq-container">
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_safety.png">
-                      </div>
-                      <strong>How does sleepbus keep all guests safe?</strong>
+              <div class="flex-row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_safety.png">
+                        </div>
+                        <strong>How does sleepbus keep all guests safe?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-safety-1"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-safety-1">
+                2 years of research and development has gone into sleepbus, which includes consulting with Victoria Police, Melbourne Fire Brigade and security/health professionals. Some of the key safety measures include:
+                <ul>
+                <li>Caretaker/Security person is onboard at all times during the service period.</li>
+                <li>Each guest has their own individual sleep pod, equipped with a lockable door.</li> 
+                <li>Each sleep pod and toilet is fitted with a monitored smoke detectori.</li>
+                <li>Toilets have been placed at the front of the bus (near Caretaker station) for increased visibility. </li>
+                <li>All internal/external area's of sleepbus have security camera surveillance monitored by a third party security person.</li>
+                <li>Guests, once on sleepbus, may leave at anytime, however, they can not return during the service period. This is for safety reasons and to allow people to enjoy a quiet nights sleep without people coming and going. </li>
+                <li>In the case of a disturbance, the Caretaker has control of the locks for each sleep pod. </li>
+                </ul>  
                   </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-safety-1"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-safety-1">
-2 years of research and development has gone into sleepbus, which includes consulting with Victoria Police, Melbourne Fire Brigade and security/health professionals. Some of the key safety measures include:
-<ul>
-<li>Caretaker/Security person is onboard at all times during the service period.</li>
-<li>Each guest has their own individual sleep pod, equipped with a lockable door.</li> 
-<li>Each sleep pod and toilet is fitted with a monitored smoke detectori.</li>
-<li>Toilets have been placed at the front of the bus (near Caretaker station) for increased visibility. </li>
-<li>All internal/external area's of sleepbus have security camera surveillance monitored by a third party security person.</li>
-<li>Guests, once on sleepbus, may leave at anytime, however, they can not return during the service period. This is for safety reasons and to allow people to enjoy a quiet nights sleep without people coming and going. </li>
-<li>In the case of a disturbance, the Caretaker has control of the locks for each sleep pod. </li>
-</ul>  
                 </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_safety.png">
-                      </div>
-                      <strong>What happens when the bus is full, 10 people miss out and begin making a disturbance outside?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-safety-2"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-safety-2">
-As sleepbus is a bus, we can just drive away!  All sleepbus’ have a secondly location available to move to in the event of a disturbance.
-                  </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_safety.png">
+                        </div>
+                        <strong>What happens when the bus is full, 10 people miss out and begin making a disturbance outside?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-safety-2"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-safety-2">
+                      As sleepbus is a bus, we can just drive away!  All sleepbus’ have a secondly location available to move to in the event of a disturbance.
+                    </div>
+                </div>
               </div>
           </div>
       </div>
@@ -254,43 +256,45 @@ As sleepbus is a bus, we can just drive away!  All sleepbus’ have a secondly l
           <a class="anchor"  id="faq-volunteer"></a>
           <div class="faq-title"><h2>VOLUNTEER</h2></div>
           <div class="faq-container">
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_volunteer.png">
-                      </div>
-                      <strong>How do I volunteer?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-volunteer-1"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-volunteer-1">
-                      If you would like to volunteer for sleepbus please <a href="/connect">register your interest</a> through our website and a member of the sleepbus team will contact you to discuss further.
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_volunteer.png">
-                      </div>
-                      <strong>What skills or experience do I need to volunteer?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-volunteer-2"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-volunteer-2">
-                      Volunteers do not require any special skills or experience.  Just a passion for the cause is required.
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_volunteer.png">
-                      </div>
-                      <strong>Does sleepbus screen its employees and volunteers?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-volunteer-3"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-volunteer-3">
-                      Yes, all sleepbus employees and volunteers will hold current Police Check and Working with Children check.
-                  </div>
+              <div class="flex-row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_volunteer.png">
+                        </div>
+                        <strong>How do I volunteer?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-volunteer-1"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-volunteer-1">
+                        If you would like to volunteer for sleepbus please <a href="/connect">register your interest</a> through our website and a member of the sleepbus team will contact you to discuss further.
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_volunteer.png">
+                        </div>
+                        <strong>What skills or experience do I need to volunteer?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-volunteer-2"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-volunteer-2">
+                        Volunteers do not require any special skills or experience.  Just a passion for the cause is required.
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_volunteer.png">
+                        </div>
+                        <strong>Does sleepbus screen its employees and volunteers?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-volunteer-3"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-volunteer-3">
+                        Yes, all sleepbus employees and volunteers will hold current Police Check and Working with Children check.
+                    </div>
+                </div>
               </div>
           </div>
       </div>
@@ -298,30 +302,32 @@ As sleepbus is a bus, we can just drive away!  All sleepbus’ have a secondly l
           <a class="anchor" id="faq-distribution"></a>
           <div class="faq-title"><h2>DISTRIBUTION</h2></div>
           <div class="faq-container">
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_distribution.png">
-                      </div>
-                      <strong>What is the 100% Model?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-distribution-1"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-distribution-1">
-                      100% of all donations are allocated to a sleepbus project; that’s our 100% Model promise to you. When you donate or fundraise, every dollar goes to building and maintaining a sleepbus project. Private donors fund our Charity operating costs, so 100% of your money can go towards getting people off the street.
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_distribution.png">
-                      </div>
-                      <strong>How are funds raised?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-distribution-2"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-distribution-2">
-                      Funds are raised via public donations, fundraising events and corporate sponsorship.
-                  </div>
+              <div class="flex-row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_distribution.png">
+                        </div>
+                        <strong>What is the 100% Model?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-distribution-1"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-distribution-1">
+                        100% of all donations are allocated to a sleepbus project; that’s our 100% Model promise to you. When you donate or fundraise, every dollar goes to building and maintaining a sleepbus project. Private donors fund our Charity operating costs, so 100% of your money can go towards getting people off the street.
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_distribution.png">
+                        </div>
+                        <strong>How are funds raised?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-distribution-2"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-distribution-2">
+                        Funds are raised via public donations, fundraising events and corporate sponsorship.
+                    </div>
+                </div>
               </div>
 
           </div>
@@ -331,90 +337,92 @@ As sleepbus is a bus, we can just drive away!  All sleepbus’ have a secondly l
           <a class="anchor" id="faq-homelessness"></a>
           <div class="faq-title"><h2>HOMELESSNESS</h2></div>
           <div class="faq-container">
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_homelessness.png">
-                      </div>
-                      <strong>What are the pathways out of homelessness?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-homelessness-1"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-homelessness-1">
-                      <ol>
-                          <li>Diverse housing options</li>
-                          <li>Economic opportunity</li>
-                          <li>Psycho-social-health infrastructure</li>
-                          <li>Awareness-raising and public education</li>
-                          <li>Institutional infrastructure</li>
-                      </ol>
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_homelessness.png">
-                      </div>
-                      <strong>Are all homeless people homeless by choice?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-homelessness-2"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-homelessness-2">
-                      Homelessness is almost no one’s choice. Nearly a quarter of the people who sought assistance from a homelessness service last year did so because of domestic and family violence. Financial difficulties and housing affordability also cause people to seek assistance. People lose their jobs and then lose their house; women flee domestic violence; people experience trauma and cannot cope; others struggle with mental illness. These experiences all contribute to homelessness and are not choices. Poor choices can contribute to homelessness, just as homelessness can contribute to making poor decisions, but outside circumstances strongly influence these choices.
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_homelessness.png">
-                      </div>
-                      <strong>What are the dangers facing Australia’s homeless?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-homelessness-3"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-homelessness-3">
-                      People experiencing homelessness encounter violence, harassment and bullying in a number of ways, for instance, sexual and physical assault and abuse; racial and sexual discrimination; domestic and family violence; and exploitation (e.g. prostitution).
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_homelessness.png">
-                      </div>
-                      <strong>How many people are homeless in Australia?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-homelessness-4"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-homelessness-4">
-                      On any given night in Australia 105,000 people are homeless. Of those, 6,314 are sleeping rough. And 1,073 of those are under 12.  Made up by 67.6% Male and 32.4% Female.
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_homelessness.png">
-                      </div>
-                      <strong>How do homeless people access our service?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-homelessness-5"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-homelessness-5">
-                      In conjunction with the local council and community groups
-                  </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                  <div class="faq-item">
-                      <div class="faq-icon">
-                          <img src="/images/faq_homelessness.png">
-                      </div>
-                      <strong>How many people are provided a safe sleep each night?</strong>
-                  </div>
-                  <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-homelessness-6"></button></div>
-                  <div class="faq-item-expand collapse" id="expand-homelessness-6">
-                      Each sleepbus is fitted out with 22 sleep pods, providing 8,030 safe sleeps per year.
-                      To achieve our vision; we will build 319+ buses which will provide more than 2,000,000 safe sleeps per year right around Australia.
-
-                  </div>
+              <div class="flex-row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_homelessness.png">
+                        </div>
+                        <strong>What are the pathways out of homelessness?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-homelessness-1"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-homelessness-1">
+                        <ol>
+                            <li>Diverse housing options</li>
+                            <li>Economic opportunity</li>
+                            <li>Psycho-social-health infrastructure</li>
+                            <li>Awareness-raising and public education</li>
+                            <li>Institutional infrastructure</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_homelessness.png">
+                        </div>
+                        <strong>Are all homeless people homeless by choice?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-homelessness-2"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-homelessness-2">
+                        Homelessness is almost no one’s choice. Nearly a quarter of the people who sought assistance from a homelessness service last year did so because of domestic and family violence. Financial difficulties and housing affordability also cause people to seek assistance. People lose their jobs and then lose their house; women flee domestic violence; people experience trauma and cannot cope; others struggle with mental illness. These experiences all contribute to homelessness and are not choices. Poor choices can contribute to homelessness, just as homelessness can contribute to making poor decisions, but outside circumstances strongly influence these choices.
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_homelessness.png">
+                        </div>
+                        <strong>What are the dangers facing Australia’s homeless?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-homelessness-3"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-homelessness-3">
+                        People experiencing homelessness encounter violence, harassment and bullying in a number of ways, for instance, sexual and physical assault and abuse; racial and sexual discrimination; domestic and family violence; and exploitation (e.g. prostitution).
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_homelessness.png">
+                        </div>
+                        <strong>How many people are homeless in Australia?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-homelessness-4"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-homelessness-4">
+                        On any given night in Australia 105,000 people are homeless. Of those, 6,314 are sleeping rough. And 1,073 of those are under 12.  Made up by 67.6% Male and 32.4% Female.
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_homelessness.png">
+                        </div>
+                        <strong>How do homeless people access our service?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-homelessness-5"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-homelessness-5">
+                        In conjunction with the local council and community groups
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="faq-item">
+                        <div class="faq-icon">
+                            <img src="/images/faq_homelessness.png">
+                        </div>
+                        <strong>How many people are provided a safe sleep each night?</strong>
+                    </div>
+                    <div class="icon-expand"><button type="button" class="btn btn-success collapsed" data-toggle="collapse" data-target="#expand-homelessness-6"></button></div>
+                    <div class="faq-item-expand collapse" id="expand-homelessness-6">
+                        Each sleepbus is fitted out with 22 sleep pods, providing 8,030 safe sleeps per year.
+                        To achieve our vision; we will build 319+ buses which will provide more than 2,000,000 safe sleeps per year right around Australia.
+                
+                    </div>
+                </div>
               </div>
           </div>
       </div>
