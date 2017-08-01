@@ -4,10 +4,7 @@
 . ./env-vars
 
 # convenience script to destroy any running containers, rebuild (with cache) and output notifications from script watching/syncing source files
-sudo docker rm -f sleepbussql
-sudo docker rm -f sleepbusweb
-sudo docker rm -f mailcatcher
-sudo docker rm -f phpmyadmin
+sudo docker rm -f {sleepbussql,sleepbusweb,mailcatcher,phpmyadmin}
 sudo docker build -t sleepbus/web:latest . 
 sudo docker run -d -p 1080:1080 --name mailcatcher schickling/mailcatcher
 sudo docker run --name sleepbussql -e MYSQL_ROOT_PASSWORD=$SLEEPBUS_DB_PASSWORD -d mariadb
